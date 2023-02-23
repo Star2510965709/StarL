@@ -1,9 +1,7 @@
-.md-typeset table:not([class]) th {
-    min-width: 5rem;
-    padding: .6rem .8rem;
-    background-color: #9facf6;
-    color: #fff;
-    vertical-align: top;
+div.col-md-9 h1:first-of-type {
+    text-align: center;
+    font-size: 60px;
+    font-weight: 300;
 }
 
 div.col-md-9>p:first-of-type {
@@ -26,4 +24,29 @@ code.no-highlight {
 
 dd {
     padding-left: 20px;
+}
+
+
+
+@media print {
+  table, table tr th, table tr td{
+      border: 1px solid black !important;
+  }
+
+  table{
+    width: 100%  !important;
+  }
+
+  table tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,0.1)  !important;
+  }
+
+/* 
+  .table {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    background-color: transparent !important;
+  }
+*/
+
 }
