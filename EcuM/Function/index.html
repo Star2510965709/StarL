@@ -1,0 +1,1598 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="星星">
+      
+      
+        <meta name="author" content="Jian.Jiang">
+      
+      
+        <link rel="canonical" href="https://www.xxstar.com/EcuM/Function/">
+      
+      
+        <link rel="prev" href="../EcuM/">
+      
+      
+        <link rel="next" href="../API/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+    
+    
+      
+        <title>Function - Star Shine</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../resources/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-orange" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Star Shine" class="md-header__button md-logo" aria-label="Star Shine" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Star Shine
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Function
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Star Shine" class="md-nav__button md-logo" aria-label="Star Shine" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Star Shine
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Mode Manger
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Mode Manger
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          EcuM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          EcuM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EcuM/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Function
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Function
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    功能描述
+  </a>
+  
+    <nav class="md-nav" aria-label="功能描述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#startup" class="md-nav__link">
+    STARTUP 阶段
+  </a>
+  
+    <nav class="md-nav" aria-label="STARTUP 阶段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#startpreos" class="md-nav__link">
+    StartPreOS序列中的活动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startpostos" class="md-nav__link">
+    StartPostOS序列中的活动
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    SHUTDOWN 阶段
+  </a>
+  
+    <nav class="md-nav" aria-label="SHUTDOWN 阶段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offpreos" class="md-nav__link">
+    OffPreOS序列中的活动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offpostos" class="md-nav__link">
+    OffPostOS序列中的活动
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sleep" class="md-nav__link">
+    SLEEP 阶段
+  </a>
+  
+    <nav class="md-nav" aria-label="SLEEP 阶段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gosleep" class="md-nav__link">
+    GoSleep序列中的活动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    暂停序列中的活动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    轮询序列中的活动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaving-halt-or-poll" class="md-nav__link">
+    Leaving Halt or Poll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    唤醒重启序列中的活动
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#up" class="md-nav__link">
+    UP 阶段
+  </a>
+  
+    <nav class="md-nav" aria-label="UP 阶段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    唤醒源状态处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    唤醒验证序列中的活动
+  </a>
+  
+    <nav class="md-nav" aria-label="唤醒验证序列中的活动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    通信信道唤醒
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecu" class="md-nav__link">
+    唤醒源与ECU管理器的交互
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    唤醒验证超时
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    具有唤醒源的驱动程序的要求
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown-targets" class="md-nav__link">
+    ShutDown Targets
+  </a>
+  
+    <nav class="md-nav" aria-label="ShutDown Targets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sleep_1" class="md-nav__link">
+    Sleep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    Reset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alarm-clock" class="md-nav__link">
+    Alarm Clock
+  </a>
+  
+    <nav class="md-nav" aria-label="Alarm Clock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alarm-clocks-and-users" class="md-nav__link">
+    Alarm Clocks and Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum-clock-time" class="md-nav__link">
+    EcuM Clock Time
+  </a>
+  
+    <nav class="md-nav" aria-label="EcuM Clock Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecum-clock-time-in-the-up-phase" class="md-nav__link">
+    EcuM Clock Time in the UP Phase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum-clock-time-in-the-sleep-phase" class="md-nav__link">
+    EcuM Clock Time in the Sleep Phase
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multicore" class="md-nav__link">
+    MultiCore
+  </a>
+  
+    <nav class="md-nav" aria-label="MultiCore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-core" class="md-nav__link">
+    Master Core
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slave-core" class="md-nav__link">
+    Slave Core
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          BswM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          BswM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/BswM/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/Function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/API/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          关于
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/release-notes/" class="md-nav__link">
+        发行说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        贡献
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/license/" class="md-nav__link">
+        许可
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    功能描述
+  </a>
+  
+    <nav class="md-nav" aria-label="功能描述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#startup" class="md-nav__link">
+    STARTUP 阶段
+  </a>
+  
+    <nav class="md-nav" aria-label="STARTUP 阶段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#startpreos" class="md-nav__link">
+    StartPreOS序列中的活动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#startpostos" class="md-nav__link">
+    StartPostOS序列中的活动
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown" class="md-nav__link">
+    SHUTDOWN 阶段
+  </a>
+  
+    <nav class="md-nav" aria-label="SHUTDOWN 阶段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#offpreos" class="md-nav__link">
+    OffPreOS序列中的活动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#offpostos" class="md-nav__link">
+    OffPostOS序列中的活动
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sleep" class="md-nav__link">
+    SLEEP 阶段
+  </a>
+  
+    <nav class="md-nav" aria-label="SLEEP 阶段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gosleep" class="md-nav__link">
+    GoSleep序列中的活动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    暂停序列中的活动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    轮询序列中的活动
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leaving-halt-or-poll" class="md-nav__link">
+    Leaving Halt or Poll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    唤醒重启序列中的活动
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#up" class="md-nav__link">
+    UP 阶段
+  </a>
+  
+    <nav class="md-nav" aria-label="UP 阶段">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    唤醒源状态处理
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    唤醒验证序列中的活动
+  </a>
+  
+    <nav class="md-nav" aria-label="唤醒验证序列中的活动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    通信信道唤醒
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecu" class="md-nav__link">
+    唤醒源与ECU管理器的交互
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    唤醒验证超时
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    具有唤醒源的驱动程序的要求
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shutdown-targets" class="md-nav__link">
+    ShutDown Targets
+  </a>
+  
+    <nav class="md-nav" aria-label="ShutDown Targets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sleep_1" class="md-nav__link">
+    Sleep
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset" class="md-nav__link">
+    Reset
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alarm-clock" class="md-nav__link">
+    Alarm Clock
+  </a>
+  
+    <nav class="md-nav" aria-label="Alarm Clock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alarm-clocks-and-users" class="md-nav__link">
+    Alarm Clocks and Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum-clock-time" class="md-nav__link">
+    EcuM Clock Time
+  </a>
+  
+    <nav class="md-nav" aria-label="EcuM Clock Time">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecum-clock-time-in-the-up-phase" class="md-nav__link">
+    EcuM Clock Time in the UP Phase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum-clock-time-in-the-sleep-phase" class="md-nav__link">
+    EcuM Clock Time in the Sleep Phase
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multicore" class="md-nav__link">
+    MultiCore
+  </a>
+  
+    <nav class="md-nav" aria-label="MultiCore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#master-core" class="md-nav__link">
+    Master Core
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slave-core" class="md-nav__link">
+    Slave Core
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Function</h1>
+
+<h2 id="_1">功能描述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>启动阶段一直持续到模式管理设施运行为止。基本上，启动阶段包括启动模式管理所需的最少活动：<code>初始化低级驱动程序，启动操作系统以及初始化BSW调度程序和BSW模式管理器模块</code>。类似地，关断阶段与启动阶段相反，启动阶段是模式管理被取消初始化的。</p>
+</li>
+<li>
+<p>UP阶段包含默认模式，以防使用ECU模式处理。这些模式之间的转换是通过<code>ECU状态管理器模块和BSW模式管理器模块</code>之间的合作完成的。</p>
+<p><img alt="image-20230213160146197" src="../Function.assets/image-20230213160146197.png" /></p>
+</li>
+</ul>
+<p>不同阶段的功能：</p>
+<ol>
+<li>启动阶段: 目的是将基本软件模块初始化到通用模式管理设施正常运行的程度。:smile:</li>
+<li>UP阶段： 当 BSW 调度程序启动并调用BswM_Init时，UP 阶段开始。BSW和SWC运行直到它们准备好关闭或者休眠ECU.</li>
+<li>SHUTDOWN阶段： The SHUTDOWN phase handles the controlled shutdown of basic software modules and finally results in the selected shutdown target OFF or RESET .</li>
+<li>SLEEP阶段： 在该阶段节能，一般，不执行代码，但仍提供电源。（EcuM根据预期或意外的唤醒事件唤醒ECU，但是应该忽略意外的唤醒事件，所以EcuM提供了一个协议（指定了处理唤醒源的驱动程序和ECUM之间的协助过程）来验证唤醒事件）</li>
+<li>OFF阶段：ECU在断电时进入关闭状态。ECU在这种状态下可以唤醒，但仅适用于具有集成电源控制的唤醒源。</li>
+</ol>
+<h3 id="startup">STARTUP 阶段<a class="headerlink" href="#startup" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20230215150943424" src="../Function.assets/image-20230215150943424.png" /></p>
+<h4 id="startpreos">StartPreOS序列中的活动<a class="headerlink" href="#startpreos" title="Permanent link">&para;</a></h4>
+<p>表StartPreOS Sequence显示StartPreOS序列中的活动及其在EcuM_Init中执行的顺序: </p>
+<table>
+<thead>
+<tr>
+<th>StartPreOS Sequence</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initialization Activity</td>
+<td>Comment</td>
+<td>Opt.</td>
+</tr>
+<tr>
+<td>Callout   EcuM_AL_SetProgrammableInterrupts</td>
+<td>在具有可编程中断优先级的ECU上，必须在启动操作系统之前设置这些优先级。</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Callout  EcuM_AL_DriverInitZero</td>
+<td>初始化块0此调用只能初始化不使用生成后配置参数的BSW模块。调用不仅可以包含驱动程序初始化，还可以包含任何类型的preOS、低级初始化代码</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Callout   EcuM_DetermnePbConfiquration</td>
+<td>此调用预期将返回一个指向完全初始化的EcuM_ConfigType结构的指针，该结构包含ECU管理器模块和所有其他BSW模块的构建后配置数据。</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Check consistency of configuration data</td>
+<td>如果检查失败，则调用EcuM_ErrorHook。</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Caou  EcuMA DriverInitOne</td>
+<td>调用不仅可以包含驱动程序初始化，还可以包含任何类型的预操作系统、低级初始化代码</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Get reset reason</td>
+<td>重置原因源自对Mcu_GetResetRreason的调用以及通过EcuMWakeupSource配置容器定义的映射</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Select default shutdown target</td>
+<td>ECU Manager 模块应使用配置的默认关机目标（EcuMDefaultShutdownTarget）调用EcuM_GetValidatedWakeupEvents。</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Caot  EcuM  LoopDetection</td>
+<td>如果启用了循环检测，则每次启动时都会调用此调用</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>Start OS</td>
+<td>启动AUTOSAR OS</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image-20230215173502765" src="../Function.assets/image-20230215173502765.png" /></p>
+<h4 id="startpostos">StartPostOS序列中的活动<a class="headerlink" href="#startpostos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>StartPostOS Sequence</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initialization Activity</td>
+<td>Comment</td>
+<td>Opt.</td>
+</tr>
+<tr>
+<td>Start BSW Scheduler</td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Init BSW Mode Manager</td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td>Init BSW Scheduler</td>
+<td>Initialize the semaphores for critical sections used by BSW modules</td>
+<td>no</td>
+</tr>
+<tr>
+<td>Start Scheduler Timing</td>
+<td>Start periodical events for BSW/SWCs</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p>当通过EcuM_StartupTwo 功能激活时，ECU管理器模块应执行StartPostOS序列中的操作:</p>
+<p><img alt="image-20230215175231168" src="../Function.assets/image-20230215175231168.png" /></p>
+<h3 id="shutdown">SHUTDOWN 阶段<a class="headerlink" href="#shutdown" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20230216143527975" src="../Function.assets/image-20230216143527975.png" /></p>
+<h4 id="offpreos">OffPreOS序列中的活动<a class="headerlink" href="#offpreos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>OffPreOS Sequence</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shutdown Activity</td>
+<td>Comment</td>
+<td>Opt.</td>
+</tr>
+<tr>
+<td>De-init BSW Mode Manager</td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td>De-init BSW Scheduler</td>
+<td></td>
+<td>no</td>
+</tr>
+<tr>
+<td>检查唤醒事件。所有挂起的唤醒事件或仅在关机期间验证的唤醒事件都将被考虑在关机期间，具体取决于 EcuMIgnoreWakeupEvValOffPreOS 的配置。</td>
+<td>Purpose is to detect wakeup events that occurred during shutdown</td>
+<td>no</td>
+</tr>
+<tr>
+<td>如果唤醒事件处于挂起状态，请将 RESET 设置为关机目标（将使用 EcuMDefaultResetModeRef 的默认复位模式）</td>
+<td>仅当检测到挂起的唤醒事件以允许立即启动时，才应执行此操作</td>
+<td>no</td>
+</tr>
+<tr>
+<td>ShutdownOS</td>
+<td>Last operation in this OS task</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image-20230216144331850" src="../Function.assets/image-20230216144331850.png" /></p>
+<h4 id="offpostos">OffPostOS序列中的活动<a class="headerlink" href="#offpostos" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>OffPostOS Sequence</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Shutdown Activity</td>
+<td>Comment</td>
+<td>Opt.</td>
+</tr>
+<tr>
+<td>Callout EcuM_OnGoOffTwo</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Callout EcuM_AL_Reset or Callout EcuM_AL_SwitchOff</td>
+<td>Depends on the selected shutdown target (RESET or OFF)</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image-20230216144913511" src="../Function.assets/image-20230216144913511.png" /></p>
+<h3 id="sleep">SLEEP 阶段<a class="headerlink" href="#sleep" title="Permanent link">&para;</a></h3>
+<p><img alt="image-20230216145014630" src="../Function.assets/image-20230216145014630.png" /></p>
+<h4 id="gosleep">GoSleep序列中的活动<a class="headerlink" href="#gosleep" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230216145521171" src="../Function.assets/image-20230216145521171.png" /></p>
+<h4 id="_2">暂停序列中的活动<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230216150134974" src="../Function.assets/image-20230216150134974.png" /></p>
+<h4 id="_3">轮询序列中的活动<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230216152100913" src="../Function.assets/image-20230216152100913.png" /></p>
+<h4 id="leaving-halt-or-poll">Leaving Halt or Poll<a class="headerlink" href="#leaving-halt-or-poll" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>如果在ECU处于停止或轮询状态时发生唤醒事件（例如切换唤醒线路，CAN总线上的通信等），则ECU管理器模块应通过执行唤醒重启序列重新获得控制权并退出睡眠阶段。</strong></li>
+<li>可以调用 ISR 来处理唤醒事件，但这取决于硬件和驱动程序实现。</li>
+</ul>
+<p>如果在ECU处于停止或轮询状态时发生异常事件（硬件复位或电源循环），ECU管理器模块应在STARTUP阶段重新启动ECU。</p>
+<h4 id="_4">唤醒重启序列中的活动<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>WakeupRestart⁶</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wakeup Activity</td>
+<td>Comment</td>
+<td>Opt.</td>
+</tr>
+<tr>
+<td>Restore MCU normal mode</td>
+<td>选定的MCU模式在配置参数EcuMNormalMcuModeRef中配置</td>
+<td></td>
+</tr>
+<tr>
+<td>Get the pending wakeup sources</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Callout  EcuM_DisableWakeupSources</td>
+<td>禁用当前挂起的唤醒源，但保留其他唤醒源，以便以后可以唤醒。</td>
+<td></td>
+</tr>
+<tr>
+<td>Callout  EcuM_AL_DriverRestart</td>
+<td>初始化需要重新启动的驱动程序</td>
+<td></td>
+</tr>
+<tr>
+<td>Unlock Scheduler</td>
+<td>从此时开始，所有其他任务可能会再次运行。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image-20230220094606194" src="../Function.assets/image-20230220094606194.png" /></p>
+<h3 id="up">UP 阶段<a class="headerlink" href="#up" title="Permanent link">&para;</a></h3>
+<p>在UP阶段，EcuM_MainFunction定期执行，它有三个主要功能：</p>
+<ul>
+<li>检查唤醒源是否已唤醒，并在必要时启动唤醒验证</li>
+<li>更新闹钟计时器</li>
+<li>仲裁RUN和POST_RUN请求和释放。</li>
+</ul>
+<h4 id="_5">唤醒源状态处理<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>唤醒源不仅在唤醒期间处理，而且与所有其他 EcuM 活动并行连续处理。此功能在EcuM_MainFunction中运行，通过模式请求与ECU管理的其余部分完全分离。</p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NONE</td>
+<td>No wakeup event was detected or has been cleared.</td>
+</tr>
+<tr>
+<td>PENDING</td>
+<td>A wakeup event was detected but not yet validated.</td>
+</tr>
+<tr>
+<td>VALIDATED</td>
+<td>A wakeup event was detected and succesfully validated.</td>
+</tr>
+<tr>
+<td>EXPIRED</td>
+<td>A wakeup event was detected but validation failed.</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="image-20230220150549407" src="../Function.assets/image-20230220150549407.png" /></p>
+<p>当ECU管理器操作导致唤醒源的状态发生变化时，ECU管理器模块应向BswM发出模式请求，将唤醒源的模式更改为新的唤醒源状态。</p>
+<p>当ECU管理器模块处于UP阶段时，唤醒事件通常不会触发状态更改。但是，它们会触发停止和轮询子阶段的结束。然后，ECU 管理器模块自动执行唤醒重启序列，然后返回到 UP 阶段。</p>
+<blockquote>
+<p>总结：每个挂起的事件都是独立验证的（如果已配置），EcuM 将结果作为模式请求发布到 BswM，这反过来可以触发 EcuM 中的状态更改。</p>
+</blockquote>
+<h4 id="_6">唤醒验证序列中的活动<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230220153235444" src="../Function.assets/image-20230220153235444.png" /></p>
+<h5 id="_7">通信信道唤醒<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h5>
+<p>如果通信信道上发生唤醒，则相应的总线收发器驱动程序必须通过调用<code>EcuM_SetWakeupEvent</code>功能来通知ECU管理器模块。</p>
+<h5 id="ecu">唤醒源与ECU管理器的交互<a class="headerlink" href="#ecu" title="Permanent link">&para;</a></h5>
+<p>当发生唤醒事件时，相应的驱动程序应通知ECU管理器模块唤醒。此通知最可能的方式是:</p>
+<ul>
+<li>退出“停止”或“轮询”序列后。在这种情况下，ECU Manager 模块调用EcuM_AL_DriverRestart来重新初始化相关驱动程序，从而有机会扫描其硬件，例如挂起的唤醒中断。</li>
+<li>如果唤醒源实际上处于睡眠模式，则驱动程序必须自主扫描唤醒事件;通过轮询或等待中断。</li>
+</ul>
+<h5 id="_8">唤醒验证超时<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h5>
+<p>ECU 管理器模块应提供单个唤醒验证超时计时器或每个唤醒源一个计时器。</p>
+<h5 id="_9">具有唤醒源的驱动程序的要求<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h5>
+<p>检测到唤醒事件时，驱动程序必须调用EcuM_SetWakeupEvent一次，并提供一个EcuM_WakeupSourceType参数，用于标识配置中指定的唤醒源。</p>
+<p>ECU 管理器模块应检测在驱动程序初始化之前发生的唤醒，无论是从停止/轮询还是从关闭。</p>
+<h3 id="shutdown-targets">ShutDown Targets<a class="headerlink" href="#shutdown-targets" title="Permanent link">&para;</a></h3>
+<p>“关闭标志”是一个描述性术语，用于描述未执行代码的所有状态 ECU。它们被称为关闭标志，因为它们是状态机在离开 UP 阶段时将驱动到的目标状态。以下状态是关闭标志：</p>
+<ul>
+<li>Off</li>
+<li>Sleep</li>
+<li>Reset</li>
+</ul>
+<h4 id="sleep_1">Sleep<a class="headerlink" href="#sleep_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<ol>
+<li>在睡眠阶段不会错过任何唤醒事件。如果在进入睡眠序列中发生了唤醒事件，则不应输入停止或轮询序列。</li>
+<li>ECU管理器模块可以定义一组可配置的睡眠模式（参见EcuMSleepMode），其中每个模式本身都是一个关断目标。</li>
+<li>ECU 管理器模块应允许将 MCU 休眠模式映射到 ECU 休眠模式，从而允许将它们作为关断目标寻址。</li>
+<li>关机目标睡眠应将所有内核置于睡眠状态。</li>
+</ol>
+</blockquote>
+<h4 id="reset">Reset<a class="headerlink" href="#reset" title="Permanent link">&para;</a></h4>
+<blockquote>
+<ol>
+<li>ECU 管理器模块应定义一组可配置的复位模式（参见 EcuMResetMode 和 EcuM_ResetType ），其中每种模式本身都是一个关断目标。该集将最低限度地包含以下目标：<ul>
+<li>Mcu_PerformReset</li>
+<li>WdgM_PerformReset</li>
+<li>T oggle I/O Pin via DIO / SPI</li>
+</ul>
+</li>
+<li>ECU管理器模块应允许为复位目标定义别名</li>
+<li>ECU 管理器模块应定义一组可配置的复位原因（请参阅 EcuMSshutdownCause 和 EcuM_ShutdownCauseType ）。该集应至少包含以下目标：<ul>
+<li>ECU状态机进入停机状态</li>
+<li>WdgM检测到故障</li>
+<li>DCM请求关闭I</li>
+<li>重置时间。</li>
+</ul>
+</li>
+<li>ECU管理器模块应为BSW模块和SW-C提供设施<ul>
+<li>记录停机原因</li>
+<li>获取一组最近的关机原因</li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h3 id="alarm-clock">Alarm Clock<a class="headerlink" href="#alarm-clock" title="Permanent link">&para;</a></h3>
+<p>ECU 管理器模块维护一个主闹钟，其值决定了 ECU 被唤醒的时间。此外，ECU管理器管理一个内部时钟，即EcuM时钟，用于与主报警进行比较。</p>
+<p>请注意，警报唤醒机制仅与 SLEEP 阶段相关。SWC 和 BSW 模块可以在 UP 阶段（并且仅在 UP 阶段）设置和检索报警值，但是，这将在 SLEEP 阶段得到遵守。</p>
+<p>与可以使用通用ECU管理器模块工具实现的其他定时/唤醒机制相比，闹钟服务在计时器到期之前不会启动唤醒重启序列。当ECU模块检测到其定时器引起唤醒事件时，它会增加其定时器并立即返回睡眠状态，除非时钟时间超过闹钟时间。</p>
+<blockquote>
+<ol>
+<li>当闹钟服务存在时（参见 EcuMAlarmClockPresent），EcuM 管理器模块应维护一个 EcuM 时钟，其时间应为自电池连接以来的时间（以秒为单位）。</li>
+<li>EcuM时钟应跟踪UP和SLEEP阶段的时间。</li>
+<li>硬件允许时，ECU重置不应重置EcuM时钟时间。</li>
+<li>应有一个且仅一个唤醒源分配给 EcuM 时钟（请参阅 EcuMAlarmWakeupSource）。</li>
+</ol>
+</blockquote>
+<h4 id="alarm-clocks-and-users">Alarm Clocks and Users<a class="headerlink" href="#alarm-clocks-and-users" title="Permanent link">&para;</a></h4>
+<p>SW-C和BSW模块可以各自维护一个闹钟（用户闹钟）。每个用户闹钟（参见EcuMAlarmClock）都与一个EcuMAlarmClockUser相关联，该用户标识相应的SW-C或BSW模块。</p>
+<blockquote>
+<ol>
+<li>每个EcuM用户最多应有一个用户闹钟。</li>
+<li>EcuM用户不得设置其他用户闹钟的值。</li>
+<li>ECU 管理器模块应始终将主闹钟值设置为最早的用户闹钟值的值。</li>
+<li>只有授权的 EcuM 用户才能设置 EcuM 时钟时间（请参阅 EcuMSetClockAllowedUsers ）。</li>
+</ol>
+</blockquote>
+<h4 id="ecum-clock-time">EcuM Clock Time<a class="headerlink" href="#ecum-clock-time" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>如果底层硬件机制是基于滴答的，ECUM应相应地“纠正”时间。</p>
+</blockquote>
+<h5 id="ecum-clock-time-in-the-up-phase">EcuM Clock Time in the UP Phase<a class="headerlink" href="#ecum-clock-time-in-the-up-phase" title="Permanent link">&para;</a></h5>
+<p>EcuM_MainFunction在UP阶段递增EcuM时钟。它使用标准操作系统机制（警报/计数器）来推导其时间。请注意计数器与 EcuM 时间之间的粒度差异，<strong>以秒为单位</strong></p>
+<h5 id="ecum-clock-time-in-the-sleep-phase">EcuM Clock Time in the Sleep Phase<a class="headerlink" href="#ecum-clock-time-in-the-sleep-phase" title="Permanent link">&para;</a></h5>
+<p>有两种替代方法可以在睡眠期间增加 EcuM 时钟，具体取决于所选的睡眠模式（EcuMSleepModeSuspend 参数） 在停止序列中（请参阅 7.5.2 停止序列中的活动），必须将 GPT 驱动程序放入GPT_MODE_SLEEP，以仅配置时基所需的计时器通道。它还要求 GPT 使用 Gpt_EnableWakeup API 启用基于计时器的唤醒通道。最好将Gpt_StartTimer API 设置为 1 秒，但如果无法达到此值，则需要更频繁地唤醒 EcuM 以累积多个计时器唤醒，直到累积 1 秒以增加时钟值。</p>
+<blockquote>
+<ol>
+<li>当离开睡眠状态时，ECU管理器模块将中止任何活动用户闹钟和主闹钟。这意味着时钟感应和其他事件引起的唤醒都将导致清除所有警报。</li>
+<li>用户警报和主警报应在启动前操作系统序列、唤醒重启序列和关闭前操作系统序列中取消</li>
+</ol>
+</blockquote>
+<h3 id="multicore">MultiCore<a class="headerlink" href="#multicore" title="Permanent link">&para;</a></h3>
+<p>BSW 模块可以分布在不同的分区上，因此可以分布在不同的内核上。一些BSW模块作为BswM必须包含在每个分区中。操作系统或 EcuM 等其他模块已包含在每个内核的一个分区中。</p>
+<p><img alt="image-20230221164645078" src="../Function.assets/image-20230221164645078.png" /></p>
+<p>在多核架构中，EcuM必须以每核一个实例的方式分布。</p>
+<p>有一个指定的主核心，引导加载程序通过EcuM_Init启动主 Ecu M。主 EcuM 启动一些驱动程序，确定构建后配置，并使用所有附属 EcuM 启动所有剩余内核。</p>
+<p>现在，每个 EcuM 启动核心本地操作系统和所有核心本地 BswM（每个分区中正好驻留一个 BswM）。</p>
+<h4 id="master-core">Master Core<a class="headerlink" href="#master-core" title="Permanent link">&para;</a></h4>
+<p>有一个明确的主核心。主内核是哪个内核，由引导加载器确定。主核心的EcuM作为第一个BSW模块启动并执行初始化操作。</p>
+<p>然后是使用所有其他 EcuM 启动所有其他内核。</p>
+<p>当这些启动时，它与每个卫星EcuM一起初始化核心本地操作系统和BswM。</p>
+<h4 id="slave-core">Slave Core<a class="headerlink" href="#slave-core" title="Permanent link">&para;</a></h4>
+<p>在每个从属核心上，必须运行一颗卫星EcuM。如果一个核心包含多个分区，则每个核心只能存在于 EcuM 上。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2023 Jian.Jiang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+    
+  </body>
+</html>

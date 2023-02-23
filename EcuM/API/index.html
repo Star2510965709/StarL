@@ -1,0 +1,2043 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="星星">
+      
+      
+        <meta name="author" content="Jian.Jiang">
+      
+      
+        <link rel="canonical" href="https://www.xxstar.com/EcuM/API/">
+      
+      
+        <link rel="prev" href="../Function/">
+      
+      
+        <link rel="next" href="../SequenceCharts/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+    
+    
+      
+        <title>API - Star Shine</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../resources/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-orange" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-specification" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Star Shine" class="md-header__button md-logo" aria-label="Star Shine" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Star Shine
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Star Shine" class="md-nav__button md-logo" aria-label="Star Shine" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Star Shine
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Mode Manger
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Mode Manger
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          EcuM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          EcuM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../EcuM/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-specification" class="md-nav__link">
+    API specification
+  </a>
+  
+    <nav class="md-nav" aria-label="API specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecum_configtype" class="md-nav__link">
+    EcuM_ConfigType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_runstatustype" class="md-nav__link">
+    EcuM_RunStatusType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_wakeupsourcetype" class="md-nav__link">
+    EcuM_WakeupSourceType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_wakeupstatustype" class="md-nav__link">
+    EcuM_WakeupStatusType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_resettype" class="md-nav__link">
+    EcuM_ResetType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_statetype" class="md-nav__link">
+    EcuM_StateType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-definitions" class="md-nav__link">
+    Function Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Function Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getversioninfo" class="md-nav__link">
+    EcuM_GetVersionInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_godownhaltpoll" class="md-nav__link">
+    EcuM_GoDownHaltPoll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_init" class="md-nav__link">
+    EcuM_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_startuptwo" class="md-nav__link">
+    EcuM_StartupTwo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_shutdown" class="md-nav__link">
+    EcuM_Shutdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_setstate" class="md-nav__link">
+    EcuM_SetState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_requestrun" class="md-nav__link">
+    EcuM_RequestRUN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_releaserun" class="md-nav__link">
+    EcuM_ReleaseRUN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_requestpost_run" class="md-nav__link">
+    EcuM_RequestPOST_RUN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_releasepost_run" class="md-nav__link">
+    EcuM_ReleasePOST_RUN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_selectshutdowntarget" class="md-nav__link">
+    EcuM_SelectShutdownTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getshutdowntarget" class="md-nav__link">
+    EcuM_GetShutdownTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getlastshutdowntarget" class="md-nav__link">
+    EcuM_GetLastShutdownTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_selectshutdowncause" class="md-nav__link">
+    EcuM_SelectShutdownCause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getshutdowncause" class="md-nav__link">
+    EcuM_GetShutdownCause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_checkwakeup" class="md-nav__link">
+    EcuM_CheckWakeup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getpendingwakeupevents" class="md-nav__link">
+    EcuM_GetPendingWakeupEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_clearwakeupevent" class="md-nav__link">
+    EcuM_ClearWakeupEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getvalidatedwakeupevents" class="md-nav__link">
+    EcuM_GetValidatedWakeupEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getexpiredwakeupevents" class="md-nav__link">
+    EcuM_GetExpiredWakeupEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_setrelwakeupalarm" class="md-nav__link">
+    EcuM_SetRelWakeupAlarm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_setabswakeupalarm" class="md-nav__link">
+    EcuM_SetAbsWakeupAlarm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_abortwakeupalarm" class="md-nav__link">
+    EcuM_AbortWakeupAlarm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getcurrenttime" class="md-nav__link">
+    EcuM_GetCurrentTime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getwakeuptime" class="md-nav__link">
+    EcuM_GetWakeupTime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_setclock" class="md-nav__link">
+    EcuM_SetClock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_selectboottarget" class="md-nav__link">
+    EcuM_SelectBootTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getboottarget" class="md-nav__link">
+    EcuM_GetBootTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_setwakeupevent" class="md-nav__link">
+    EcuM_SetWakeupEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_validatewakeupevent" class="md-nav__link">
+    EcuM_ValidateWakeupEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_errorhook" class="md-nav__link">
+    EcuM_ErrorHook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_setprogrammableinterrupts" class="md-nav__link">
+    EcuM_AL_SetProgrammableInterrupts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_driverinitzero" class="md-nav__link">
+    EcuM_AL_DriverInitZero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_determinepbconfiguration" class="md-nav__link">
+    EcuM_DeterminePbConfiguration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_driverinitone" class="md-nav__link">
+    EcuM_AL_DriverInitOne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_loopdetection" class="md-nav__link">
+    EcuM_LoopDetection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_ongooffone" class="md-nav__link">
+    EcuM_OnGoOffOne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_ongoofftwo" class="md-nav__link">
+    EcuM_OnGoOffTwo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_switchoff" class="md-nav__link">
+    EcuM_AL_SwitchOff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_reset" class="md-nav__link">
+    EcuM_AL_Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_enablewakeupsources" class="md-nav__link">
+    EcuM_EnableWakeupSources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_generateramhash" class="md-nav__link">
+    EcuM_GenerateRamHash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_sleepactivity" class="md-nav__link">
+    EcuM_SleepActivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_startcheckwakeup" class="md-nav__link">
+    EcuM_StartCheckWakeup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_checkwakeuphook" class="md-nav__link">
+    EcuM_CheckWakeupHook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_checkramhash" class="md-nav__link">
+    EcuM_CheckRamHash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_disablewakeupsources" class="md-nav__link">
+    EcuM_DisableWakeupSources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_driverrestart" class="md-nav__link">
+    EcuM_AL_DriverRestart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_startwakeupsources" class="md-nav__link">
+    EcuM_StartWakeupSources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_checkvalidation" class="md-nav__link">
+    EcuM_CheckValidation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_stopwakeupsources" class="md-nav__link">
+    EcuM_StopWakeupSources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_mainfunction" class="md-nav__link">
+    EcuM_MainFunction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callbacks-from-the-startup-phase" class="md-nav__link">
+    Callbacks from the STARTUP phase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ports-and-port-interface-for-ecum_shutdowntarget-interface" class="md-nav__link">
+    Ports and Port Interface for EcuM_ShutdownTarget Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Ports and Port Interface for EcuM_ShutdownTarget Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-interface-for-ecum_boottarget-interface" class="md-nav__link">
+    Port Interface for EcuM_BootTarget Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Interface for EcuM_BootTarget Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces_1" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-interface-for-ecum_alarmclock-interface" class="md-nav__link">
+    Port Interface for EcuM_AlarmClock Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Interface for EcuM_AlarmClock Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces_2" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-interface-for-ecum_time-interface" class="md-nav__link">
+    Port Interface for EcuM_Time Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Interface for EcuM_Time Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces_3" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-interface-for-ecum_staterequest-interface" class="md-nav__link">
+    Port Interface for EcuM_StateRequest Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Interface for EcuM_StateRequest Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces_4" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-interface-for-ecum_currentmode-interface" class="md-nav__link">
+    Port Interface for EcuM_CurrentMode Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Interface for EcuM_CurrentMode Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces_5" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-of-the-ecu-manager-service" class="md-nav__link">
+    Definition of the ECU Manager Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          BswM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          BswM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/BswM/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/Function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/API/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          关于
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/release-notes/" class="md-nav__link">
+        发行说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        贡献
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/license/" class="md-nav__link">
+        许可
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-specification" class="md-nav__link">
+    API specification
+  </a>
+  
+    <nav class="md-nav" aria-label="API specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecum_configtype" class="md-nav__link">
+    EcuM_ConfigType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_runstatustype" class="md-nav__link">
+    EcuM_RunStatusType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_wakeupsourcetype" class="md-nav__link">
+    EcuM_WakeupSourceType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_wakeupstatustype" class="md-nav__link">
+    EcuM_WakeupStatusType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_resettype" class="md-nav__link">
+    EcuM_ResetType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_statetype" class="md-nav__link">
+    EcuM_StateType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-definitions" class="md-nav__link">
+    Function Definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Function Definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getversioninfo" class="md-nav__link">
+    EcuM_GetVersionInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_godownhaltpoll" class="md-nav__link">
+    EcuM_GoDownHaltPoll
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_init" class="md-nav__link">
+    EcuM_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_startuptwo" class="md-nav__link">
+    EcuM_StartupTwo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_shutdown" class="md-nav__link">
+    EcuM_Shutdown
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_setstate" class="md-nav__link">
+    EcuM_SetState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_requestrun" class="md-nav__link">
+    EcuM_RequestRUN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_releaserun" class="md-nav__link">
+    EcuM_ReleaseRUN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_requestpost_run" class="md-nav__link">
+    EcuM_RequestPOST_RUN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_releasepost_run" class="md-nav__link">
+    EcuM_ReleasePOST_RUN
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_selectshutdowntarget" class="md-nav__link">
+    EcuM_SelectShutdownTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getshutdowntarget" class="md-nav__link">
+    EcuM_GetShutdownTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getlastshutdowntarget" class="md-nav__link">
+    EcuM_GetLastShutdownTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_selectshutdowncause" class="md-nav__link">
+    EcuM_SelectShutdownCause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getshutdowncause" class="md-nav__link">
+    EcuM_GetShutdownCause
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_checkwakeup" class="md-nav__link">
+    EcuM_CheckWakeup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getpendingwakeupevents" class="md-nav__link">
+    EcuM_GetPendingWakeupEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_clearwakeupevent" class="md-nav__link">
+    EcuM_ClearWakeupEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getvalidatedwakeupevents" class="md-nav__link">
+    EcuM_GetValidatedWakeupEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getexpiredwakeupevents" class="md-nav__link">
+    EcuM_GetExpiredWakeupEvents
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_setrelwakeupalarm" class="md-nav__link">
+    EcuM_SetRelWakeupAlarm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_setabswakeupalarm" class="md-nav__link">
+    EcuM_SetAbsWakeupAlarm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_abortwakeupalarm" class="md-nav__link">
+    EcuM_AbortWakeupAlarm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getcurrenttime" class="md-nav__link">
+    EcuM_GetCurrentTime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getwakeuptime" class="md-nav__link">
+    EcuM_GetWakeupTime
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_setclock" class="md-nav__link">
+    EcuM_SetClock
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_selectboottarget" class="md-nav__link">
+    EcuM_SelectBootTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_getboottarget" class="md-nav__link">
+    EcuM_GetBootTarget
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_setwakeupevent" class="md-nav__link">
+    EcuM_SetWakeupEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_validatewakeupevent" class="md-nav__link">
+    EcuM_ValidateWakeupEvent
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_errorhook" class="md-nav__link">
+    EcuM_ErrorHook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_setprogrammableinterrupts" class="md-nav__link">
+    EcuM_AL_SetProgrammableInterrupts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_driverinitzero" class="md-nav__link">
+    EcuM_AL_DriverInitZero
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_determinepbconfiguration" class="md-nav__link">
+    EcuM_DeterminePbConfiguration
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_driverinitone" class="md-nav__link">
+    EcuM_AL_DriverInitOne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_loopdetection" class="md-nav__link">
+    EcuM_LoopDetection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_ongooffone" class="md-nav__link">
+    EcuM_OnGoOffOne
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_ongoofftwo" class="md-nav__link">
+    EcuM_OnGoOffTwo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_switchoff" class="md-nav__link">
+    EcuM_AL_SwitchOff
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_reset" class="md-nav__link">
+    EcuM_AL_Reset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_enablewakeupsources" class="md-nav__link">
+    EcuM_EnableWakeupSources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_generateramhash" class="md-nav__link">
+    EcuM_GenerateRamHash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_sleepactivity" class="md-nav__link">
+    EcuM_SleepActivity
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_startcheckwakeup" class="md-nav__link">
+    EcuM_StartCheckWakeup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_checkwakeuphook" class="md-nav__link">
+    EcuM_CheckWakeupHook
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_checkramhash" class="md-nav__link">
+    EcuM_CheckRamHash
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_disablewakeupsources" class="md-nav__link">
+    EcuM_DisableWakeupSources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_al_driverrestart" class="md-nav__link">
+    EcuM_AL_DriverRestart
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_startwakeupsources" class="md-nav__link">
+    EcuM_StartWakeupSources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_checkvalidation" class="md-nav__link">
+    EcuM_CheckValidation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_stopwakeupsources" class="md-nav__link">
+    EcuM_StopWakeupSources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecum_mainfunction" class="md-nav__link">
+    EcuM_MainFunction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#callbacks-from-the-startup-phase" class="md-nav__link">
+    Callbacks from the STARTUP phase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ports-and-port-interface-for-ecum_shutdowntarget-interface" class="md-nav__link">
+    Ports and Port Interface for EcuM_ShutdownTarget Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Ports and Port Interface for EcuM_ShutdownTarget Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-interface-for-ecum_boottarget-interface" class="md-nav__link">
+    Port Interface for EcuM_BootTarget Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Interface for EcuM_BootTarget Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces_1" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-interface-for-ecum_alarmclock-interface" class="md-nav__link">
+    Port Interface for EcuM_AlarmClock Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Interface for EcuM_AlarmClock Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces_2" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-interface-for-ecum_time-interface" class="md-nav__link">
+    Port Interface for EcuM_Time Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Interface for EcuM_Time Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces_3" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-interface-for-ecum_staterequest-interface" class="md-nav__link">
+    Port Interface for EcuM_StateRequest Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Interface for EcuM_StateRequest Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces_4" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-interface-for-ecum_currentmode-interface" class="md-nav__link">
+    Port Interface for EcuM_CurrentMode Interface
+  </a>
+  
+    <nav class="md-nav" aria-label="Port Interface for EcuM_CurrentMode Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces_5" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#definition-of-the-ecu-manager-service" class="md-nav__link">
+    Definition of the ECU Manager Service
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>API</h1>
+
+<h2 id="api-specification">API specification<a class="headerlink" href="#api-specification" title="Permanent link">&para;</a></h2>
+<p>### Type definitions</p>
+<h4 id="ecum_configtype">EcuM_ConfigType<a class="headerlink" href="#ecum_configtype" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221172651518" src="../API.assets/image-20230221172651518.png" /></p>
+<h4 id="ecum_runstatustype">EcuM_RunStatusType<a class="headerlink" href="#ecum_runstatustype" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221172747835" src="../API.assets/image-20230221172747835.png" /></p>
+<h4 id="ecum_wakeupsourcetype">EcuM_WakeupSourceType<a class="headerlink" href="#ecum_wakeupsourcetype" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221173523580" src="../API.assets/image-20230221173523580.png" /></p>
+<h4 id="ecum_wakeupstatustype">EcuM_WakeupStatusType<a class="headerlink" href="#ecum_wakeupstatustype" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221173626689" src="../API.assets/image-20230221173626689.png" /></p>
+<h4 id="ecum_resettype">EcuM_ResetType<a class="headerlink" href="#ecum_resettype" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221173657000" src="../API.assets/image-20230221173657000.png" /></p>
+<h4 id="ecum_statetype">EcuM_StateType<a class="headerlink" href="#ecum_statetype" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221173722215" src="../API.assets/image-20230221173722215.png" /></p>
+<h3 id="function-definitions">Function Definitions<a class="headerlink" href="#function-definitions" title="Permanent link">&para;</a></h3>
+<h4 id="ecum_getversioninfo">EcuM_GetVersionInfo<a class="headerlink" href="#ecum_getversioninfo" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221175212308" src="../API.assets/image-20230221175212308.png" /></p>
+<h4 id="ecum_godownhaltpoll">EcuM_GoDownHaltPoll<a class="headerlink" href="#ecum_godownhaltpoll" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221175246784" src="../API.assets/image-20230221175246784.png" /></p>
+<h4 id="ecum_init">EcuM_Init<a class="headerlink" href="#ecum_init" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221175548687" src="../API.assets/image-20230221175548687.png" /></p>
+<h4 id="ecum_startuptwo">EcuM_StartupTwo<a class="headerlink" href="#ecum_startuptwo" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221175630866" src="../API.assets/image-20230221175630866.png" /></p>
+<h4 id="ecum_shutdown">EcuM_Shutdown<a class="headerlink" href="#ecum_shutdown" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221175915905" src="../API.assets/image-20230221175915905.png" /></p>
+<h4 id="ecum_setstate">EcuM_SetState<a class="headerlink" href="#ecum_setstate" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Service Name</th>
+<th>EcuM SetState</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Syntax</td>
+<td>void EcuM SetState(   EcuM StateType state )</td>
+<td></td>
+</tr>
+<tr>
+<td>Service ID [hex]</td>
+<td>0x2b</td>
+<td></td>
+</tr>
+<tr>
+<td>Sync/Async</td>
+<td>Synchronous</td>
+<td></td>
+</tr>
+<tr>
+<td>Reentrancy</td>
+<td>Reentrant</td>
+<td></td>
+</tr>
+<tr>
+<td>Parameters (in)</td>
+<td>state</td>
+<td>State indicated by BswM.</td>
+</tr>
+<tr>
+<td>Parameters (inout)</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>Parameters (out)</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>Return value</td>
+<td>None</td>
+<td></td>
+</tr>
+<tr>
+<td>Description</td>
+<td>BswM调用的通知状态切换的函数。</td>
+<td></td>
+</tr>
+<tr>
+<td>Available via</td>
+<td>EcuM.h</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="ecum_requestrun">EcuM_RequestRUN<a class="headerlink" href="#ecum_requestrun" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221180628703" src="../API.assets/image-20230221180628703.png" /></p>
+<h4 id="ecum_releaserun">EcuM_ReleaseRUN<a class="headerlink" href="#ecum_releaserun" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221181316351" src="../API.assets/image-20230221181316351.png" /></p>
+<h4 id="ecum_requestpost_run">EcuM_RequestPOST_RUN<a class="headerlink" href="#ecum_requestpost_run" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221181420693" src="../API.assets/image-20230221181420693.png" /></p>
+<h4 id="ecum_releasepost_run">EcuM_ReleasePOST_RUN<a class="headerlink" href="#ecum_releasepost_run" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221181621835" src="../API.assets/image-20230221181621835.png" /></p>
+<h4 id="ecum_selectshutdowntarget">EcuM_SelectShutdownTarget<a class="headerlink" href="#ecum_selectshutdowntarget" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221181650377" src="../API.assets/image-20230221181650377.png" /></p>
+<h4 id="ecum_getshutdowntarget">EcuM_GetShutdownTarget<a class="headerlink" href="#ecum_getshutdowntarget" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221181751580" src="../API.assets/image-20230221181751580.png" /></p>
+<h4 id="ecum_getlastshutdowntarget">EcuM_GetLastShutdownTarget<a class="headerlink" href="#ecum_getlastshutdowntarget" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221183159649" src="../API.assets/image-20230221183159649.png" /></p>
+<h4 id="ecum_selectshutdowncause">EcuM_SelectShutdownCause<a class="headerlink" href="#ecum_selectshutdowncause" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221183441489" src="../API.assets/image-20230221183441489.png" /></p>
+<h4 id="ecum_getshutdowncause">EcuM_GetShutdownCause<a class="headerlink" href="#ecum_getshutdowncause" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221183527146" src="../API.assets/image-20230221183527146.png" /></p>
+<h4 id="ecum_checkwakeup">EcuM_CheckWakeup<a class="headerlink" href="#ecum_checkwakeup" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221183605216" src="../API.assets/image-20230221183605216.png" /></p>
+<h4 id="ecum_getpendingwakeupevents">EcuM_GetPendingWakeupEvents<a class="headerlink" href="#ecum_getpendingwakeupevents" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221183710682" src="../API.assets/image-20230221183710682.png" /></p>
+<h4 id="ecum_clearwakeupevent">EcuM_ClearWakeupEvent<a class="headerlink" href="#ecum_clearwakeupevent" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221183754806" src="../API.assets/image-20230221183754806.png" /></p>
+<h4 id="ecum_getvalidatedwakeupevents">EcuM_GetValidatedWakeupEvents<a class="headerlink" href="#ecum_getvalidatedwakeupevents" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221183831113" src="../API.assets/image-20230221183831113.png" /></p>
+<h4 id="ecum_getexpiredwakeupevents">EcuM_GetExpiredWakeupEvents<a class="headerlink" href="#ecum_getexpiredwakeupevents" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230221184434532" src="../API.assets/image-20230221184434532.png" /></p>
+<h4 id="ecum_setrelwakeupalarm">EcuM_SetRelWakeupAlarm<a class="headerlink" href="#ecum_setrelwakeupalarm" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222093425360" src="../API.assets/image-20230222093425360.png" /></p>
+<h4 id="ecum_setabswakeupalarm">EcuM_SetAbsWakeupAlarm<a class="headerlink" href="#ecum_setabswakeupalarm" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222093520226" src="../API.assets/image-20230222093520226.png" /></p>
+<h4 id="ecum_abortwakeupalarm">EcuM_AbortWakeupAlarm<a class="headerlink" href="#ecum_abortwakeupalarm" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222094514830" src="../API.assets/image-20230222094514830.png" /></p>
+<h4 id="ecum_getcurrenttime">EcuM_GetCurrentTime<a class="headerlink" href="#ecum_getcurrenttime" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222095022403" src="../API.assets/image-20230222095022403.png" /></p>
+<h4 id="ecum_getwakeuptime">EcuM_GetWakeupTime<a class="headerlink" href="#ecum_getwakeuptime" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222095800719" src="../API.assets/image-20230222095800719.png" /></p>
+<h4 id="ecum_setclock">EcuM_SetClock<a class="headerlink" href="#ecum_setclock" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222095853711" src="../API.assets/image-20230222095853711.png" /></p>
+<h4 id="ecum_selectboottarget">EcuM_SelectBootTarget<a class="headerlink" href="#ecum_selectboottarget" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222095956574" src="../API.assets/image-20230222095956574.png" /></p>
+<h4 id="ecum_getboottarget">EcuM_GetBootTarget<a class="headerlink" href="#ecum_getboottarget" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222100426533" src="../API.assets/image-20230222100426533.png" /></p>
+<h4 id="ecum_setwakeupevent">EcuM_SetWakeupEvent<a class="headerlink" href="#ecum_setwakeupevent" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222100509893" src="../API.assets/image-20230222100509893.png" /></p>
+<h4 id="ecum_validatewakeupevent">EcuM_ValidateWakeupEvent<a class="headerlink" href="#ecum_validatewakeupevent" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222100547006" src="../API.assets/image-20230222100547006.png" /></p>
+<h4 id="ecum_errorhook">EcuM_ErrorHook<a class="headerlink" href="#ecum_errorhook" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222100647200" src="../API.assets/image-20230222100647200.png" /></p>
+<h4 id="ecum_al_setprogrammableinterrupts">EcuM_AL_SetProgrammableInterrupts<a class="headerlink" href="#ecum_al_setprogrammableinterrupts" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222100745858" src="../API.assets/image-20230222100745858.png" /></p>
+<h4 id="ecum_al_driverinitzero">EcuM_AL_DriverInitZero<a class="headerlink" href="#ecum_al_driverinitzero" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222100824623" src="../API.assets/image-20230222100824623.png" /></p>
+<h4 id="ecum_determinepbconfiguration">EcuM_DeterminePbConfiguration<a class="headerlink" href="#ecum_determinepbconfiguration" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222100908498" src="../API.assets/image-20230222100908498.png" /></p>
+<h4 id="ecum_al_driverinitone">EcuM_AL_DriverInitOne<a class="headerlink" href="#ecum_al_driverinitone" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222101414508" src="../API.assets/image-20230222101414508.png" /></p>
+<h4 id="ecum_loopdetection">EcuM_LoopDetection<a class="headerlink" href="#ecum_loopdetection" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222101455353" src="../API.assets/image-20230222101455353.png" /></p>
+<h4 id="ecum_ongooffone">EcuM_OnGoOffOne<a class="headerlink" href="#ecum_ongooffone" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222101536682" src="../API.assets/image-20230222101536682.png" /></p>
+<h4 id="ecum_ongoofftwo">EcuM_OnGoOffTwo<a class="headerlink" href="#ecum_ongoofftwo" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222101622153" src="../API.assets/image-20230222101622153.png" /></p>
+<h4 id="ecum_al_switchoff">EcuM_AL_SwitchOff<a class="headerlink" href="#ecum_al_switchoff" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222101701603" src="../API.assets/image-20230222101701603.png" /></p>
+<h4 id="ecum_al_reset">EcuM_AL_Reset<a class="headerlink" href="#ecum_al_reset" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222101739816" src="../API.assets/image-20230222101739816.png" /></p>
+<h4 id="ecum_enablewakeupsources">EcuM_EnableWakeupSources<a class="headerlink" href="#ecum_enablewakeupsources" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222101813564" src="../API.assets/image-20230222101813564.png" /></p>
+<h4 id="ecum_generateramhash">EcuM_GenerateRamHash<a class="headerlink" href="#ecum_generateramhash" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222102143939" src="../API.assets/image-20230222102143939.png" /></p>
+<h4 id="ecum_sleepactivity">EcuM_SleepActivity<a class="headerlink" href="#ecum_sleepactivity" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222102220368" src="../API.assets/image-20230222102220368.png" /></p>
+<h4 id="ecum_startcheckwakeup">EcuM_StartCheckWakeup<a class="headerlink" href="#ecum_startcheckwakeup" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222102255882" src="../API.assets/image-20230222102255882.png" /></p>
+<h4 id="ecum_checkwakeuphook">EcuM_CheckWakeupHook<a class="headerlink" href="#ecum_checkwakeuphook" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222102332348" src="../API.assets/image-20230222102332348.png" /></p>
+<h4 id="ecum_checkramhash">EcuM_CheckRamHash<a class="headerlink" href="#ecum_checkramhash" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222102407410" src="../API.assets/image-20230222102407410.png" /></p>
+<h4 id="ecum_disablewakeupsources">EcuM_DisableWakeupSources<a class="headerlink" href="#ecum_disablewakeupsources" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222102438792" src="../API.assets/image-20230222102438792.png" /></p>
+<h4 id="ecum_al_driverrestart">EcuM_AL_DriverRestart<a class="headerlink" href="#ecum_al_driverrestart" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222102509396" src="../API.assets/image-20230222102509396.png" /></p>
+<h4 id="ecum_startwakeupsources">EcuM_StartWakeupSources<a class="headerlink" href="#ecum_startwakeupsources" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222102546055" src="../API.assets/image-20230222102546055.png" /></p>
+<h4 id="ecum_checkvalidation">EcuM_CheckValidation<a class="headerlink" href="#ecum_checkvalidation" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222102845827" src="../API.assets/image-20230222102845827.png" /></p>
+<h4 id="ecum_stopwakeupsources">EcuM_StopWakeupSources<a class="headerlink" href="#ecum_stopwakeupsources" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222102953360" src="../API.assets/image-20230222102953360.png" /></p>
+<h4 id="ecum_mainfunction">EcuM_MainFunction<a class="headerlink" href="#ecum_mainfunction" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222103016504" src="../API.assets/image-20230222103016504.png" /></p>
+<h4 id="callbacks-from-the-startup-phase">Callbacks from the STARTUP phase<a class="headerlink" href="#callbacks-from-the-startup-phase" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230222103310832" src="../API.assets/image-20230222103310832.png" /></p>
+<h4 id="ports-and-port-interface-for-ecum_shutdowntarget-interface">Ports and Port Interface for EcuM_ShutdownTarget Interface<a class="headerlink" href="#ports-and-port-interface-for-ecum_shutdowntarget-interface" title="Permanent link">&para;</a></h4>
+<p>EcuM_ShutdownTarget客户端-服务器接口允许 SW-C 选择一个关闭目标，该目标将在下一个关闭阶段得到遵守。但是，请注意，ECU 管理器模块不提供端口接口来允许 SW-C 启动关断。</p>
+<h5 id="service-interfaces">Service Interfaces<a class="headerlink" href="#service-interfaces" title="Permanent link">&para;</a></h5>
+<p><img alt="image-20230222103801225" src="../API.assets/image-20230222103801225.png" /></p>
+<p><img alt="image-20230222104753099" src="../API.assets/image-20230222104753099.png" /></p>
+<p><img alt="image-20230222104821801" src="../API.assets/image-20230222104821801.png" /></p>
+<p><img alt="image-20230222104849173" src="../API.assets/image-20230222104849173.png" /></p>
+<p><img alt="image-20230222104909301" src="../API.assets/image-20230222104909301.png" /></p>
+<p><img alt="image-20230222104931051" src="../API.assets/image-20230222104931051.png" /></p>
+<h4 id="port-interface-for-ecum_boottarget-interface">Port Interface for EcuM_BootTarget Interface<a class="headerlink" href="#port-interface-for-ecum_boottarget-interface" title="Permanent link">&para;</a></h4>
+<p>想要选择引导目标的SW-C必须需要客户端-服务器接口EcuM_BootT target。</p>
+<h5 id="service-interfaces_1">Service Interfaces<a class="headerlink" href="#service-interfaces_1" title="Permanent link">&para;</a></h5>
+<p><img alt="image-20230222105431567" src="../API.assets/image-20230222105431567.png" /></p>
+<p><img alt="image-20230222105455324" src="../API.assets/image-20230222105455324.png" /></p>
+<p><img alt="image-20230222105511243" src="../API.assets/image-20230222105511243.png" /></p>
+<h4 id="port-interface-for-ecum_alarmclock-interface">Port Interface for EcuM_AlarmClock Interface<a class="headerlink" href="#port-interface-for-ecum_alarmclock-interface" title="Permanent link">&para;</a></h4>
+<p>想要使用闹钟的 SW-C 必须要求客户端-服务器接口EcuM_AlarmClock。EcuM_AlarmClock 接口使用端口定义的参数值来标识管理其闹钟的用户。</p>
+<h5 id="service-interfaces_2">Service Interfaces<a class="headerlink" href="#service-interfaces_2" title="Permanent link">&para;</a></h5>
+<p><img alt="image-20230222105939055" src="../API.assets/image-20230222105939055.png" /></p>
+<p><img alt="image-20230222110000871" src="../API.assets/image-20230222110000871.png" /></p>
+<p><img alt="image-20230222110017636" src="../API.assets/image-20230222110017636.png" /></p>
+<p><img alt="image-20230222110040343" src="../API.assets/image-20230222110040343.png" /></p>
+<p><img alt="image-20230222110054805" src="../API.assets/image-20230222110054805.png" /></p>
+<h4 id="port-interface-for-ecum_time-interface">Port Interface for EcuM_Time Interface<a class="headerlink" href="#port-interface-for-ecum_time-interface" title="Permanent link">&para;</a></h4>
+<p>想要使用EucM的时间功能的SW-C必须需要客户端-服务器接口EcuM_time</p>
+<h5 id="service-interfaces_3">Service Interfaces<a class="headerlink" href="#service-interfaces_3" title="Permanent link">&para;</a></h5>
+<p><img alt="image-20230222110217897" src="../API.assets/image-20230222110217897.png" /></p>
+<p><img alt="image-20230222110543898" src="../API.assets/image-20230222110543898.png" /></p>
+<p><img alt="image-20230222110641384" src="../API.assets/image-20230222110641384.png" /></p>
+<h4 id="port-interface-for-ecum_staterequest-interface">Port Interface for EcuM_StateRequest Interface<a class="headerlink" href="#port-interface-for-ecum_staterequest-interface" title="Permanent link">&para;</a></h4>
+<p>当容器 EcuMModeHandling可用时，ECU 状态管理器模块应为以下功能提供系统服务：</p>
+<ul>
+<li>requesting RUN</li>
+<li>releasing RUN</li>
+<li>requesting POST_RUN</li>
+<li>releasing POST_RUN</li>
+</ul>
+<p>需要保持 ECU 活动状态或需要在 ECU 关闭之前执行任何操作的 SW-C 需要客户端-服务器接口EcuM_StateRequest。此接口使用端口定义的参数值来标识请求模式的用户。</p>
+<h5 id="service-interfaces_4">Service Interfaces<a class="headerlink" href="#service-interfaces_4" title="Permanent link">&para;</a></h5>
+<p><img alt="image-20230222110943327" src="../API.assets/image-20230222110943327.png" /></p>
+<p><img alt="image-20230222110956054" src="../API.assets/image-20230222110956054.png" /></p>
+<p><img alt="image-20230222111012648" src="../API.assets/image-20230222111012648.png" /></p>
+<p><img alt="image-20230222111032366" src="../API.assets/image-20230222111032366.png" /></p>
+<p><img alt="image-20230222111045573" src="../API.assets/image-20230222111045573.png" /></p>
+<h4 id="port-interface-for-ecum_currentmode-interface">Port Interface for EcuM_CurrentMode Interface<a class="headerlink" href="#port-interface-for-ecum_currentmode-interface" title="Permanent link">&para;</a></h4>
+<p>ECU 状态管理器模块的模式端口应声明以下模式：</p>
+<ul>
+<li>STARTUP</li>
+<li>RUN</li>
+<li>POST_RUN</li>
+<li>SLEEP</li>
+<li>SHUTDOWN</li>
+</ul>
+<p>此定义是应用程序确实需要知道的ECU模式的简化视图。它不会以任何方式限制或限制如何定义应用程序模式。应用程序模式完全由应用程序本身处理。</p>
+<blockquote>
+<p>发生模式更改时，应通过 RTE 模式端口将模式更改通知 SW-C。</p>
+<p>该规范假定端口名为 currentMode，并且将使用 RTE 的直接 API。在这些条件下，通过调用 ype Rte_Switch_currentMode_currentMode（ Rte_ModeT ype_EcuM_Mode 模式）Rte_StatusT模式发出信号，其中模式是要通知的新模式。值范围由前面的要求指定。应忽略返回值。</p>
+<p>想要收到模式更改通知的 SW-C 应要求模式开关接口EcuM_CurrentMode。</p>
+</blockquote>
+<h5 id="service-interfaces_5">Service Interfaces<a class="headerlink" href="#service-interfaces_5" title="Permanent link">&para;</a></h5>
+<p><img alt="image-20230222111759183" src="../API.assets/image-20230222111759183.png" /></p>
+<h4 id="definition-of-the-ecu-manager-service">Definition of the ECU Manager Service<a class="headerlink" href="#definition-of-the-ecu-manager-service" title="Permanent link">&para;</a></h4>
+<p>请注意，这些定义只能在ECU配置期间完成（因为某些ECU管理器模块配置参数决定了ECU管理器模块服务提供的端口数）。另请注意，SW-C 的实现不依赖于这些定义。</p>
+<p>在 AUTOSAR 系统中，RTE 上方和下方都有端口。ECU 管理器模块服务描述定义了提供给 RTE 的端口，使用此服务的每个软件的描述都必须包含“服务端口”，这些端口需要来自 RTE 的这些 ECU 管理器模块端口。</p>
+<p>EcuM提供以下端口：</p>
+<p><img alt="image-20230222112014589" src="../API.assets/image-20230222112014589.png" /></p>
+<p><img alt="image-20230222112117543" src="../API.assets/image-20230222112117543.png" /></p>
+<p><img alt="image-20230222112135316" src="../API.assets/image-20230222112135316.png" /></p>
+<p><img alt="image-20230222112151110" src="../API.assets/image-20230222112151110.png" /></p>
+<p><img alt="image-20230222112317215" src="../API.assets/image-20230222112317215.png" /></p>
+<p><img alt="image-20230222112350554" src="../API.assets/image-20230222112350554.png" /></p>
+<p>EcuM提供以下类型：</p>
+<p><img alt="image-20230222112426701" src="../API.assets/image-20230222112426701.png" /></p>
+<p><img alt="image-20230222112450582" src="../API.assets/image-20230222112450582.png" /></p>
+<p><img alt="image-20230222112809772" src="../API.assets/image-20230222112809772.png" /></p>
+<p><img alt="image-20230222112826040" src="../API.assets/image-20230222112826040.png" /></p>
+<p><img alt="image-20230222112843541" src="../API.assets/image-20230222112843541.png" /></p>
+<p><img alt="image-20230222112859015" src="../API.assets/image-20230222112859015.png" /></p>
+<blockquote>
+<p>对于多核ECU，可以在一个或多个内核上提供EcuM AUTOSAR服务（标准化AUTOSAR接口）。</p>
+<p>对于多核ECU，其他BSW模块使用的EcuM C-API接口（标准化接口）应在运行EcuM的每个分区中提供。</p>
+</blockquote>
+<p>其他 BSW 模块用于与 EcuM 通信的 C-API 接口由每个 EcuM 实例提供，因为每个 EcuM 实例都可以执行一些独立的操作。如果 BSW 模块想要使用 EcuM，但位于不包含自己的 EcuM 实例的分区内。这些模块可以使用 SchM 函数来跨越分区边界。</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2023 Jian.Jiang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+    
+  </body>
+</html>

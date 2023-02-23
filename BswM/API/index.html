@@ -1,0 +1,1557 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="星星">
+      
+      
+        <meta name="author" content="Jian.Jiang">
+      
+      
+        <link rel="canonical" href="https://www.xxstar.com/BswM/API/">
+      
+      
+        <link rel="prev" href="../Function/">
+      
+      
+        <link rel="next" href="../SequenceCharts/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+    
+    
+      
+        <title>API - Star Shine</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../resources/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-orange" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-specification" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Star Shine" class="md-header__button md-logo" aria-label="Star Shine" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Star Shine
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Star Shine" class="md-nav__button md-logo" aria-label="Star Shine" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Star Shine
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Mode Manger
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Mode Manger
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          EcuM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          EcuM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/EcuM/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/Function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/API/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          BswM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          BswM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BswM/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-specification" class="md-nav__link">
+    API specification
+  </a>
+  
+    <nav class="md-nav" aria-label="API specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-definitions" class="md-nav__link">
+    Type definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Type definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bswm_configtype" class="md-nav__link">
+    BswM_ConfigType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_modetype" class="md-nav__link">
+    BswM_ModeType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_usertype" class="md-nav__link">
+    BswM_UserType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-definitions" class="md-nav__link">
+    Function definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Function definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bswm_bswmpartitionrestarted" class="md-nav__link">
+    BswM_BswMPartitionRestarted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_cansm_currentstate" class="md-nav__link">
+    BswM_CanSM_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_comm_currentmode" class="md-nav__link">
+    BswM_ComM_CurrentMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_comm_currentpncmode" class="md-nav__link">
+    BswM_ComM_CurrentPNCMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_comm_initiatereset" class="md-nav__link">
+    BswM_ComM_InitiateReset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_dcm_applicationupdated" class="md-nav__link">
+    BswM_Dcm_ApplicationUpdated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_dcm_communicationmode_currentstate" class="md-nav__link">
+    BswM_Dcm_CommunicationMode_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_deinit" class="md-nav__link">
+    BswM_Deinit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_ecum_currentstate" class="md-nav__link">
+    BswM_EcuM_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_ecum_currentwakeup" class="md-nav__link">
+    BswM_EcuM_CurrentWakeup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_ecum_requestedstate" class="md-nav__link">
+    BswM_EcuM_RequestedState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_ethif_portgrouplinkstatechg" class="md-nav__link">
+    BswM_EthIf_PortGroupLinkStateChg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_ethsm_currentstate" class="md-nav__link">
+    BswM_EthSM_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_frsm_currentstate" class="md-nav__link">
+    BswM_FrSM_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_getversioninfo" class="md-nav__link">
+    BswM_GetVersionInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_init" class="md-nav__link">
+    BswM_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_j1939dcmbroadcaststatus" class="md-nav__link">
+    BswM_J1939DcmBroadcastStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_j1939nm_statechangenotification" class="md-nav__link">
+    BswM_J1939Nm_StateChangeNotification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_linsm_currentschedule" class="md-nav__link">
+    BswM_LinSM_CurrentSchedule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_linsm_currentstate" class="md-nav__link">
+    BswM_LinSM_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_lintp_requestmode" class="md-nav__link">
+    BswM_LinTp_RequestMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_nm_carwakeupindication" class="md-nav__link">
+    BswM_Nm_CarWakeUpIndication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_nm_statechangenotification" class="md-nav__link">
+    BswM_Nm_StateChangeNotification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_nvm_currentblockmode" class="md-nav__link">
+    BswM_NvM_CurrentBlockMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_nvm_currentjobmode" class="md-nav__link">
+    BswM_NvM_CurrentJobMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_requestmode" class="md-nav__link">
+    BswM_RequestMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_sd_clientservicecurrentstate" class="md-nav__link">
+    BswM_Sd_ClientServiceCurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_sd_consumedeventgroupcurrentstate" class="md-nav__link">
+    BswM_Sd_ConsumedEventGroupCurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_sd_eventhandlercurrentstate" class="md-nav__link">
+    BswM_Sd_EventHandlerCurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_soad_soconmodechg" class="md-nav__link">
+    BswM_SoAd_SoConModeChg
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduled-functions" class="md-nav__link">
+    Scheduled functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduled functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bswm_mainfunction" class="md-nav__link">
+    BswM_MainFunction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ports" class="md-nav__link">
+    Ports
+  </a>
+  
+    <nav class="md-nav" aria-label="Ports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bswm_modenotificationport" class="md-nav__link">
+    BswM_modeNotificationPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_moderequestport" class="md-nav__link">
+    BswM_modeRequestPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_modeswitchport" class="md-nav__link">
+    BswM_modeSwitchPort
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-to-request-port-mappings" class="md-nav__link">
+    API to Request Port Mappings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          关于
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/release-notes/" class="md-nav__link">
+        发行说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        贡献
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/license/" class="md-nav__link">
+        许可
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-specification" class="md-nav__link">
+    API specification
+  </a>
+  
+    <nav class="md-nav" aria-label="API specification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#type-definitions" class="md-nav__link">
+    Type definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Type definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bswm_configtype" class="md-nav__link">
+    BswM_ConfigType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_modetype" class="md-nav__link">
+    BswM_ModeType
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_usertype" class="md-nav__link">
+    BswM_UserType
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#function-definitions" class="md-nav__link">
+    Function definitions
+  </a>
+  
+    <nav class="md-nav" aria-label="Function definitions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bswm_bswmpartitionrestarted" class="md-nav__link">
+    BswM_BswMPartitionRestarted
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_cansm_currentstate" class="md-nav__link">
+    BswM_CanSM_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_comm_currentmode" class="md-nav__link">
+    BswM_ComM_CurrentMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_comm_currentpncmode" class="md-nav__link">
+    BswM_ComM_CurrentPNCMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_comm_initiatereset" class="md-nav__link">
+    BswM_ComM_InitiateReset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_dcm_applicationupdated" class="md-nav__link">
+    BswM_Dcm_ApplicationUpdated
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_dcm_communicationmode_currentstate" class="md-nav__link">
+    BswM_Dcm_CommunicationMode_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_deinit" class="md-nav__link">
+    BswM_Deinit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_ecum_currentstate" class="md-nav__link">
+    BswM_EcuM_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_ecum_currentwakeup" class="md-nav__link">
+    BswM_EcuM_CurrentWakeup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_ecum_requestedstate" class="md-nav__link">
+    BswM_EcuM_RequestedState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_ethif_portgrouplinkstatechg" class="md-nav__link">
+    BswM_EthIf_PortGroupLinkStateChg
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_ethsm_currentstate" class="md-nav__link">
+    BswM_EthSM_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_frsm_currentstate" class="md-nav__link">
+    BswM_FrSM_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_getversioninfo" class="md-nav__link">
+    BswM_GetVersionInfo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_init" class="md-nav__link">
+    BswM_Init
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_j1939dcmbroadcaststatus" class="md-nav__link">
+    BswM_J1939DcmBroadcastStatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_j1939nm_statechangenotification" class="md-nav__link">
+    BswM_J1939Nm_StateChangeNotification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_linsm_currentschedule" class="md-nav__link">
+    BswM_LinSM_CurrentSchedule
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_linsm_currentstate" class="md-nav__link">
+    BswM_LinSM_CurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_lintp_requestmode" class="md-nav__link">
+    BswM_LinTp_RequestMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_nm_carwakeupindication" class="md-nav__link">
+    BswM_Nm_CarWakeUpIndication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_nm_statechangenotification" class="md-nav__link">
+    BswM_Nm_StateChangeNotification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_nvm_currentblockmode" class="md-nav__link">
+    BswM_NvM_CurrentBlockMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_nvm_currentjobmode" class="md-nav__link">
+    BswM_NvM_CurrentJobMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_requestmode" class="md-nav__link">
+    BswM_RequestMode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_sd_clientservicecurrentstate" class="md-nav__link">
+    BswM_Sd_ClientServiceCurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_sd_consumedeventgroupcurrentstate" class="md-nav__link">
+    BswM_Sd_ConsumedEventGroupCurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_sd_eventhandlercurrentstate" class="md-nav__link">
+    BswM_Sd_EventHandlerCurrentState
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_soad_soconmodechg" class="md-nav__link">
+    BswM_SoAd_SoConModeChg
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scheduled-functions" class="md-nav__link">
+    Scheduled functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Scheduled functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bswm_mainfunction" class="md-nav__link">
+    BswM_MainFunction
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-interfaces" class="md-nav__link">
+    Service Interfaces
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Interfaces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ports" class="md-nav__link">
+    Ports
+  </a>
+  
+    <nav class="md-nav" aria-label="Ports">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bswm_modenotificationport" class="md-nav__link">
+    BswM_modeNotificationPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_moderequestport" class="md-nav__link">
+    BswM_modeRequestPort
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bswm_modeswitchport" class="md-nav__link">
+    BswM_modeSwitchPort
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#api-to-request-port-mappings" class="md-nav__link">
+    API to Request Port Mappings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>API</h1>
+
+<h2 id="api-specification">API specification<a class="headerlink" href="#api-specification" title="Permanent link">&para;</a></h2>
+<h3 id="type-definitions">Type definitions<a class="headerlink" href="#type-definitions" title="Permanent link">&para;</a></h3>
+<h4 id="bswm_configtype">BswM_ConfigType<a class="headerlink" href="#bswm_configtype" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223160832584" src="../API.assets/image-20230223160832584.png" /></p>
+<h4 id="bswm_modetype">BswM_ModeType<a class="headerlink" href="#bswm_modetype" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223160949461" src="../API.assets/image-20230223160949461.png" /></p>
+<h4 id="bswm_usertype">BswM_UserType<a class="headerlink" href="#bswm_usertype" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223161045753" src="../API.assets/image-20230223161045753.png" /></p>
+<h3 id="function-definitions">Function definitions<a class="headerlink" href="#function-definitions" title="Permanent link">&para;</a></h3>
+<h4 id="bswm_bswmpartitionrestarted">BswM_BswMPartitionRestarted<a class="headerlink" href="#bswm_bswmpartitionrestarted" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223161148946" src="../API.assets/image-20230223161148946.png" /></p>
+<h4 id="bswm_cansm_currentstate">BswM_CanSM_CurrentState<a class="headerlink" href="#bswm_cansm_currentstate" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223161426105" src="../API.assets/image-20230223161426105.png" /></p>
+<h4 id="bswm_comm_currentmode">BswM_ComM_CurrentMode<a class="headerlink" href="#bswm_comm_currentmode" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223161738296" src="../API.assets/image-20230223161738296.png" /></p>
+<h4 id="bswm_comm_currentpncmode">BswM_ComM_CurrentPNCMode<a class="headerlink" href="#bswm_comm_currentpncmode" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223161818798" src="../API.assets/image-20230223161818798.png" /></p>
+<h4 id="bswm_comm_initiatereset">BswM_ComM_InitiateReset<a class="headerlink" href="#bswm_comm_initiatereset" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223161903260" src="../API.assets/image-20230223161903260.png" /></p>
+<h4 id="bswm_dcm_applicationupdated">BswM_Dcm_ApplicationUpdated<a class="headerlink" href="#bswm_dcm_applicationupdated" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223161936613" src="../API.assets/image-20230223161936613.png" /></p>
+<h4 id="bswm_dcm_communicationmode_currentstate">BswM_Dcm_CommunicationMode_CurrentState<a class="headerlink" href="#bswm_dcm_communicationmode_currentstate" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223162012759" src="../API.assets/image-20230223162012759.png" /></p>
+<h4 id="bswm_deinit">BswM_Deinit<a class="headerlink" href="#bswm_deinit" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223162057452" src="../API.assets/image-20230223162057452.png" /></p>
+<h4 id="bswm_ecum_currentstate">BswM_EcuM_CurrentState<a class="headerlink" href="#bswm_ecum_currentstate" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223162140966" src="../API.assets/image-20230223162140966.png" /></p>
+<h4 id="bswm_ecum_currentwakeup">BswM_EcuM_CurrentWakeup<a class="headerlink" href="#bswm_ecum_currentwakeup" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223162234274" src="../API.assets/image-20230223162234274.png" /></p>
+<h4 id="bswm_ecum_requestedstate">BswM_EcuM_RequestedState<a class="headerlink" href="#bswm_ecum_requestedstate" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223162532886" src="../API.assets/image-20230223162532886.png" /></p>
+<h4 id="bswm_ethif_portgrouplinkstatechg">BswM_EthIf_PortGroupLinkStateChg<a class="headerlink" href="#bswm_ethif_portgrouplinkstatechg" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223162925992" src="../API.assets/image-20230223162925992.png" /></p>
+<h4 id="bswm_ethsm_currentstate">BswM_EthSM_CurrentState<a class="headerlink" href="#bswm_ethsm_currentstate" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223162959286" src="../API.assets/image-20230223162959286.png" /></p>
+<h4 id="bswm_frsm_currentstate">BswM_FrSM_CurrentState<a class="headerlink" href="#bswm_frsm_currentstate" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223163026624" src="../API.assets/image-20230223163026624.png" /></p>
+<h4 id="bswm_getversioninfo">BswM_GetVersionInfo<a class="headerlink" href="#bswm_getversioninfo" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223163254631" src="../API.assets/image-20230223163254631.png" /></p>
+<h4 id="bswm_init">BswM_Init<a class="headerlink" href="#bswm_init" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223163335843" src="../API.assets/image-20230223163335843.png" /></p>
+<h4 id="bswm_j1939dcmbroadcaststatus">BswM_J1939DcmBroadcastStatus<a class="headerlink" href="#bswm_j1939dcmbroadcaststatus" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223163424711" src="../API.assets/image-20230223163424711.png" /></p>
+<h4 id="bswm_j1939nm_statechangenotification">BswM_J1939Nm_StateChangeNotification<a class="headerlink" href="#bswm_j1939nm_statechangenotification" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223163843913" src="../API.assets/image-20230223163843913.png" /></p>
+<h4 id="bswm_linsm_currentschedule">BswM_LinSM_CurrentSchedule<a class="headerlink" href="#bswm_linsm_currentschedule" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223163929205" src="../API.assets/image-20230223163929205.png" /></p>
+<h4 id="bswm_linsm_currentstate">BswM_LinSM_CurrentState<a class="headerlink" href="#bswm_linsm_currentstate" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223164223398" src="../API.assets/image-20230223164223398.png" /></p>
+<h4 id="bswm_lintp_requestmode">BswM_LinTp_RequestMode<a class="headerlink" href="#bswm_lintp_requestmode" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223164311771" src="../API.assets/image-20230223164311771.png" /></p>
+<h4 id="bswm_nm_carwakeupindication">BswM_Nm_CarWakeUpIndication<a class="headerlink" href="#bswm_nm_carwakeupindication" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223164343001" src="../API.assets/image-20230223164343001.png" /></p>
+<h4 id="bswm_nm_statechangenotification">BswM_Nm_StateChangeNotification<a class="headerlink" href="#bswm_nm_statechangenotification" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223164415465" src="../API.assets/image-20230223164415465.png" /></p>
+<h4 id="bswm_nvm_currentblockmode">BswM_NvM_CurrentBlockMode<a class="headerlink" href="#bswm_nvm_currentblockmode" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223164453863" src="../API.assets/image-20230223164453863.png" /></p>
+<h4 id="bswm_nvm_currentjobmode">BswM_NvM_CurrentJobMode<a class="headerlink" href="#bswm_nvm_currentjobmode" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223164651750" src="../API.assets/image-20230223164651750.png" /></p>
+<h4 id="bswm_requestmode">BswM_RequestMode<a class="headerlink" href="#bswm_requestmode" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223164742914" src="../API.assets/image-20230223164742914.png" /></p>
+<h4 id="bswm_sd_clientservicecurrentstate">BswM_Sd_ClientServiceCurrentState<a class="headerlink" href="#bswm_sd_clientservicecurrentstate" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223165138352" src="../API.assets/image-20230223165138352.png" /></p>
+<h4 id="bswm_sd_consumedeventgroupcurrentstate">BswM_Sd_ConsumedEventGroupCurrentState<a class="headerlink" href="#bswm_sd_consumedeventgroupcurrentstate" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223165210369" src="../API.assets/image-20230223165210369.png" /></p>
+<h4 id="bswm_sd_eventhandlercurrentstate">BswM_Sd_EventHandlerCurrentState<a class="headerlink" href="#bswm_sd_eventhandlercurrentstate" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223165600068" src="../API.assets/image-20230223165600068.png" /></p>
+<h4 id="bswm_soad_soconmodechg">BswM_SoAd_SoConModeChg<a class="headerlink" href="#bswm_soad_soconmodechg" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223165654180" src="../API.assets/image-20230223165654180.png" /></p>
+<h3 id="scheduled-functions">Scheduled functions<a class="headerlink" href="#scheduled-functions" title="Permanent link">&para;</a></h3>
+<h4 id="bswm_mainfunction">BswM_MainFunction<a class="headerlink" href="#bswm_mainfunction" title="Permanent link">&para;</a></h4>
+<p><img alt="image-20230223165724914" src="../API.assets/image-20230223165724914.png" /></p>
+<h3 id="service-interfaces">Service Interfaces<a class="headerlink" href="#service-interfaces" title="Permanent link">&para;</a></h3>
+<h4 id="ports">Ports<a class="headerlink" href="#ports" title="Permanent link">&para;</a></h4>
+<h5 id="bswm_modenotificationport">BswM_modeNotificationPort<a class="headerlink" href="#bswm_modenotificationport" title="Permanent link">&para;</a></h5>
+<p><img alt="image-20230223170303804" src="../API.assets/image-20230223170303804.png" /></p>
+<h5 id="bswm_moderequestport">BswM_modeRequestPort<a class="headerlink" href="#bswm_moderequestport" title="Permanent link">&para;</a></h5>
+<p><img alt="image-20230223170338851" src="../API.assets/image-20230223170338851.png" /></p>
+<h5 id="bswm_modeswitchport">BswM_modeSwitchPort<a class="headerlink" href="#bswm_modeswitchport" title="Permanent link">&para;</a></h5>
+<p><img alt="image-20230223170403444" src="../API.assets/image-20230223170403444.png" /></p>
+<h3 id="api-to-request-port-mappings">API to Request Port Mappings<a class="headerlink" href="#api-to-request-port-mappings" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Request Port</th>
+<th>API/ Config-parameter pairs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BswM_BswMPartitionRestarted</td>
+<td>BswMPartitionRestarted</td>
+<td></td>
+</tr>
+<tr>
+<td>BswM_CanSM_CurrentState</td>
+<td>BswMCanSMIndication</td>
+<td>Network / BswMCanSMChan- nelRef</td>
+</tr>
+<tr>
+<td>BswM_ComM_CurrentMode</td>
+<td>BswMComMIndication</td>
+<td>Network / BswMComMChannel- Ref</td>
+</tr>
+<tr>
+<td>BswM_ComM_CurrentPNCMode</td>
+<td>BswMComMPncRequest</td>
+<td>PNC  /BswMComMPncRef</td>
+</tr>
+<tr>
+<td>BswM_ComM_InitiateReset</td>
+<td>BswMComMInitiateReset</td>
+<td></td>
+</tr>
+<tr>
+<td>BswM_Dcm_ApplicationUpdated</td>
+<td>BswMDcmApplicationUpdated Indication</td>
+<td></td>
+</tr>
+<tr>
+<td>BswM_Dcm_CommunicationMode_CurrentState</td>
+<td>BswMDcmComModeRequest</td>
+<td>Network / BswMDcmComM ChannelRef</td>
+</tr>
+<tr>
+<td>BswM_EcuM_CurrentState</td>
+<td>BswMEcuMIndication</td>
+<td></td>
+</tr>
+<tr>
+<td>BswM_EcuM_CurrentWakeup</td>
+<td>BswMEcuMWakeupSource</td>
+<td>source / BswMEcuMWakeupSr- cRef</td>
+</tr>
+<tr>
+<td>BswM_EcuM_RequestedState</td>
+<td>BswMEcuMRUNRequestIndica- tion</td>
+<td>State / BswMEcuMRUNRequest ProtocolPort</td>
+</tr>
+<tr>
+<td>BswM_Ethlf_PortGroupLinkStateChg</td>
+<td>BswMEthlfPortGroupLinkState- Chg</td>
+<td>PortGroupldx/  BswMEthlf SwitchPortGroupRef</td>
+</tr>
+<tr>
+<td>BswM_EthSM_CurrentState</td>
+<td>BswMEthSMIndication</td>
+<td>Network /BswMEthSMChannel- Ref</td>
+</tr>
+<tr>
+<td>BswM_FrSM_CurrentState</td>
+<td>BswMFrSMIndication</td>
+<td>Network / BswMFrSMChannel- Ref</td>
+</tr>
+<tr>
+<td>BswM_J1939DcmBroadcastStatus</td>
+<td>BswMJ1939DcmBroadcast Status</td>
+<td>NetworkMask / BswMJ1939 DcmChannelRef</td>
+</tr>
+<tr>
+<td>BswM_J1939Nm_StateChangeNotification</td>
+<td>BswMJ1939NmIndication</td>
+<td>Network / BswMJ1939NmChan- nelRef,Node / BswMJ1939Nm NodeRef</td>
+</tr>
+<tr>
+<td>BswM_LinSM_CurrentSchedule</td>
+<td>BswMLinSchedulelndication</td>
+<td>Network / BswMLinSMChannel Ref</td>
+</tr>
+<tr>
+<td>BswM_LinSM_CurrentState</td>
+<td>BswMLinSMIndication</td>
+<td>Network / BswMLinSMChannel Ref</td>
+</tr>
+<tr>
+<td>BswM_LinTp_RequestMode</td>
+<td>BswMLinTpModeRequest</td>
+<td>Network / BswMLinTpChannel Ref</td>
+</tr>
+<tr>
+<td>BswM_Nm_CarWakeUpIndication</td>
+<td>BswMNmCarWakeUpIndication</td>
+<td></td>
+</tr>
+<tr>
+<td>BswM_Nm_StateChangeNotification</td>
+<td>BswMNmStateChangeNotifica- tion</td>
+<td>Network / BswMNmChannelRef</td>
+</tr>
+<tr>
+<td>BswM_NvM_CurrentBlockMode</td>
+<td>BswMNvMRequest</td>
+<td>Block/ BswMNvMBlockRef</td>
+</tr>
+<tr>
+<td>BswM_NvM_CurrentJobMode</td>
+<td>BswMNvMJobModelndication</td>
+<td>MultiBlockRequest / BswMNvm Service</td>
+</tr>
+<tr>
+<td>BswM_RequestMode</td>
+<td>BswMGenericRequest</td>
+<td>requesting user / BswMMode Requesterld</td>
+</tr>
+<tr>
+<td>BswM_Sd_ClientServiceCurrentState</td>
+<td>BswMSdClientServiceCurrent State</td>
+<td>SdClientServiceHandleld BswMSdClientMethodsRef</td>
+</tr>
+<tr>
+<td>BswM_Sd_ConsumedEventGroupCurrentState</td>
+<td>BswMSdConsumedEventGroup CurrentState</td>
+<td>SdConsumedEventGroupHan- dleld /BswMSdConsumedEvent GroupRef</td>
+</tr>
+<tr>
+<td>BswM_Sd_EventHandlerCurrentState</td>
+<td>BswMSdEventHandlerCurrent State</td>
+<td>SdEventHandlerHandleld BswMSdEventHandlerRef</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2023 Jian.Jiang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+    
+  </body>
+</html>
