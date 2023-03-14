@@ -1,0 +1,1367 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="星星">
+      
+      
+        <meta name="author" content="Jian.Jiang">
+      
+      
+        <link rel="canonical" href="https://www.xxstar.com/SecOC/Function/">
+      
+      
+        <link rel="prev" href="../SecOC/">
+      
+      
+        <link rel="next" href="../API/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+    
+    
+      
+        <title>Function - Star Shine</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../resources/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-orange" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Star Shine" class="md-header__button md-logo" aria-label="Star Shine" data-md-component="logo">
+      
+  <img src="../../index.assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Star Shine
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Function
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Star Shine" class="md-nav__button md-logo" aria-label="Star Shine" data-md-component="logo">
+      
+  <img src="../../index.assets/logo.png" alt="logo">
+
+    </a>
+    Star Shine
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Mode Manger
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Mode Manger
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          EcuM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          EcuM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/EcuM/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/Function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/API/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          BswM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          BswM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/BswM/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/Function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/API/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          information safety
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          information safety
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          SecOC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          SecOC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SecOC/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Function
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Function
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    功能描述
+  </a>
+  
+    <nav class="md-nav" aria-label="功能描述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    安全解决方案规范
+  </a>
+  
+    <nav class="md-nav" aria-label="安全解决方案规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    安全解决方案的基本实体
+  </a>
+  
+    <nav class="md-nav" aria-label="安全解决方案的基本实体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentic-i-pdu-and-secured-i-pdu" class="md-nav__link">
+    Authentic（真实） I-PDU and Secured（安全） I-PDU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticator" class="md-nav__link">
+    Authenticator(认证器)覆盖的数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    新鲜度值
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-pdu" class="md-nav__link">
+    I-PDU的认证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-pdu_1" class="md-nav__link">
+    I-PDU的验证
+  </a>
+  
+    <nav class="md-nav" aria-label="I-PDU的验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-pdu_2" class="md-nav__link">
+    I-PDU的成功验证
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    不对称方法下的适应
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdur" class="md-nav__link">
+    与PduR的关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdu" class="md-nav__link">
+    传出PDU的身份验证
+  </a>
+  
+    <nav class="md-nav" aria-label="传出PDU的身份验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    直接传输期间的身份验证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    触发传输期间的身份验证
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          关于
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/release-notes/" class="md-nav__link">
+        发行说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        贡献
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/license/" class="md-nav__link">
+        许可
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    功能描述
+  </a>
+  
+    <nav class="md-nav" aria-label="功能描述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    安全解决方案规范
+  </a>
+  
+    <nav class="md-nav" aria-label="安全解决方案规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    安全解决方案的基本实体
+  </a>
+  
+    <nav class="md-nav" aria-label="安全解决方案的基本实体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentic-i-pdu-and-secured-i-pdu" class="md-nav__link">
+    Authentic（真实） I-PDU and Secured（安全） I-PDU
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#authenticator" class="md-nav__link">
+    Authenticator(认证器)覆盖的数据
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    新鲜度值
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-pdu" class="md-nav__link">
+    I-PDU的认证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#i-pdu_1" class="md-nav__link">
+    I-PDU的验证
+  </a>
+  
+    <nav class="md-nav" aria-label="I-PDU的验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-pdu_2" class="md-nav__link">
+    I-PDU的成功验证
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    不对称方法下的适应
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdur" class="md-nav__link">
+    与PduR的关系
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    初始化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pdu" class="md-nav__link">
+    传出PDU的身份验证
+  </a>
+  
+    <nav class="md-nav" aria-label="传出PDU的身份验证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    直接传输期间的身份验证
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    触发传输期间的身份验证
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Function</h1>
+
+<h2 id="_1">功能描述<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>敏感数据的身份验证和完整性保护对于保护车辆系统的正确和安全功能是必要的——这确保接收到的数据来自正确的 ECU 并具有正确的值。</p>
+<p>SecOC 模块旨在为 PDU 级别的敏感数据提供资源高效且可行的身份验证机制。 本规范中提出的方法通常支持使用 <mark>对称</mark> 和 <mark>非对称</mark> 方法进行 <mark>真实性和完整性</mark> 保护。 这两种方法大致针对相同的目标，并在概念上表现出主要相似之处，但由于底层原语的不同技术特性，也存在一些差异。 另外，Authenticator常用的术语也不同。 通常，术语消息认证码 (MAC) 用于对称方法，而术语签名或数字签名指的是具有不同属性和约束的非对称方法。</p>
+<h3 id="_2">安全解决方案规范<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>本文档中描述的 SecOC 模块提供了验证车辆架构内 ECU 之间基于 PDU 的通信的 <mark>真实性</mark> 和 <mark>新鲜度</mark> 所需的功能。 该方法要求 <mark>发送 ECU 和接收 ECU 都实现一个 SecOC 模块</mark> 。 两个 SecOC 模块都集成在一起，在发送方和接收方提供上层和下层 PduR API。 两侧的SecOC模块一般都与PduR模块进行交互。</p>
+<p>为了提供消息新鲜度，发送方和接收方的 SecOC 模块从 <mark>外部新鲜度管理器</mark> 获取每个 <mark>唯一</mark> 可识别的安全 I-PDU 的 <mark>新鲜度</mark> ，即每个安全通信链路。</p>
+<p>在发送方，SecOC 模块通过向传出的 Authentic(真实的) I-PDU 添加 <mark>认证信息</mark> 来创建 Secured（安全、可靠） I-PDU。 认证信息包括 <mark>认证符（例如消息认证码）</mark> 和可选的 <mark>新鲜度值</mark> 。 无论新鲜度值是否包含在安全 I-PDU 有效载荷中，新鲜度值都会在验证器的生成过程中被考虑。 当使用 Freshness（新鲜） Counter 而不是 Timestamp 时，Freshness Manager 应在向接收方提供身份验证信息之前增加 Freshness Counter。</p>
+<p>在接收方，SecOC 模块通过验证发送方 SecOC 模块附加的 <mark>认证信息</mark> 来检查 Authentic I-PDU 的新鲜度和真实性。 为了验证 Authentic I-PDU 的真实性和新鲜度，提供给接收端 SecOC 的 Secured I-PDU 应该与发送端 SecOC 提供的 Secured I-PDU 相同，接收端 SecOC 应该知道 Freshness Value 在创建 Authenticator 期间由发送方 SecOC 使用。</p>
+<p><img alt="image-20230313181142007" src="../Function.assets/image-20230313181142007.png" /></p>
+<h4 id="_3">安全解决方案的基本实体<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h5 id="authentic-i-pdu-and-secured-i-pdu">Authentic（真实） I-PDU and Secured（安全） I-PDU<a class="headerlink" href="#authentic-i-pdu-and-secured-i-pdu" title="Permanent link">&para;</a></h5>
+<p>Secured I-PDU 的有效载荷由 Authentic I-PDU 和 Authenticator（例如消息认证码）组成。 安全 I-PDU 的有效载荷可以选择性地包括用于创建验证器的新鲜度值（例如 MAC）。 安全 I-PDU 中内容的结构顺序符合图 3。</p>
+<p><img alt="image-20230313181415001" src="../Function.assets/image-20230313181415001.png" /></p>
+<p>安全I-PDU内的真实I-PDU的长度、新鲜度值和鉴权器可以从一个唯一不可定义的安全I-PDU变化到另一个。</p>
+<p>认证器（例如 MAC）是指使用密钥、安全 I-PDU 的 <mark>数据标识符</mark> 、 <mark>真实有效负载</mark> 和 <mark>新鲜度值</mark> 生成的唯一 <mark>认证数据字符串</mark> 。 Authenticator （认证器）提供高水平的可信度，即 Authentic I-PDU 中的数据是由合法来源生成的，并在预定的时间提供给接收 ECU。</p>
+<p>根据用于生成 Authenticator 的身份验证算法（参数 SecOCTxAuthServiceConfigRef 或 SecOCRxAuthServiceConfigRef），可能会截断由身份验证算法生成的结果 Authenticator（例如，在 MAC 的情况下）。 当消息有效载荷的长度有限并且没有足够的空间来包含完整的 Authenticator 时，可能需要截断。</p>
+<p>Secured I-PDU 中包含的 Authenticator 长度（参数 SecOCAuthInfoTruncLength）特定于可唯一识别的 Secured I-PDU。 这允许通过为每个安全 I-PDU 提供 MAC 截断长度的细粒度配置来提供跨系统的灵活性（即，两个独立的唯一安全 I-PDU 可能具有不同的验证码长度，包括在安全 I-PDU 的有效载荷中）。</p>
+<p>如果截断是可能的，则 Authenticator 应该只被截断到认证算法生成的结果 Authenticator 的最高有效位。 图 5 显示了根据参数 SecOCFreshnessValueTruncLength 和 SecOCAuthInfoTruncLength 截断验证器和新鲜度值的示例。</p>
+<p><img alt="image-20230314094432753" src="../Function.assets/image-20230314094432753.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>对于静态参与者的资源约束嵌入用例，我们建议使用消息认证码（MAC）作为认证的基础（例如，基于AES[19]的CMAC[16]，具有足够的密钥长度）。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在使用 MAC 的情况下，可以仅传输和比较 MAC 的一部分。 这称为 MAC 截断。 然而，这至少对于伪造单个 MAC 会导致较低的安全级别。 虽然我们建议始终使用至少 128 位的密钥长度，但 MAC 截断可能是有益的。 当然，必须仔细选择每个用例的 MAC 的实际长度。 对于一些指导，我们参考 [16] 的附录 A。 一般来说，64 位及以上的 MAC 大小被认为可以提供足够的保护来抵御 NIST 的猜测攻击。 根据用例，不同的 MAC 大小可能是合适的，但这需要安全专家仔细判断。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00011 : 直接或间接传输到通信链路另一侧的所有SecOC数据（例如，新鲜度值、认证器、数据标识符、SecOC消息链路数据等）应按照大端字节顺序进行编码，以便每个SecOC模块以相同的方式解释数据。</p>
+<p>SWS_SecOC_00261: 安全I-PDU报头应以字节表示真实I-PDU的长度。标头的长度应可通过参数SecOCAuthPduHeaderLength进行配置。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SecOC 支持在单独的消息（安全 PDU 集合）和安全 I-PDU 报头中结合使用身份验证数据。 SecOC 还涵盖动态长度的真实 I-PDU。</p>
+</div>
+<h5 id="authenticator">Authenticator(认证器)覆盖的数据<a class="headerlink" href="#authenticator" title="Permanent link">&para;</a></h5>
+<p>计算 Authenticator 的数据包括安全 I-PDU 的数据标识符（参数 SecOCDataId）、真实 I-PDU 数据和完整新鲜度值。 它们分别连接在一起构成位数组，该位数组被传递到身份验证算法中以进行身份验证器生成/验证。</p>
+<div class="arithmatex">\[
+DataToAuthenticator = Data Identifier | secured part of the Authentic I-PDU | 
+Complete Freshness Value
+\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“|”表示串联</p>
+</div>
+<h5 id="_4">新鲜度值<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h5>
+<p>每个安全I-PDU配置有至少一个新鲜度值。新鲜度值是指用于确保安全I-PDU的新鲜度的单调计数器。这种单调计数器可以通过称为Freshness counter的单个消息计数器或称为Fresh ness Timestamp的时间戳值来实现。新鲜度值来自新鲜度管理器。</p>
+<blockquote>
+<p>SWS_SecOC_00094: 如果参数 <code>SecOCFreshnessValueTruncLength</code> 被配置为比实际新鲜度值更小的长度，SecOC 应仅包括新鲜度值的最低有效位直到安全 I-PDU 中的 <code>SecOCFreshnessValueTruncLength</code>。</p>
+<p>如果参数 <code>SecOCFreshnessValueTruncLength</code> 配置为 0，则新鲜度值不应包含在受保护的 I-PDU 中。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>包含在经过验证的消息有效负载中的完整新鲜度值的更多位数导致更大的窗口，在该窗口中接收器保持与发送器新鲜度值同步而不执行同步策略。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>当在经过身份验证的消息有效负载中包含部分新鲜度值时，新鲜度值被称为两部分，最高有效位和最低有效位。 安全 I-PDU 有效载荷中包含的计数器部分称为新鲜度值的最低有效位，而计数器的其余部分称为新鲜度值的最高有效位。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00219: 如果 <code>SecOCUseAuthDataFreshness</code> 设置为 TRUE，SecOC 将使用 Authentic I-PDU 的一部分作为新鲜度。 在这种情况下，<code>SecOCAuthDataFreshnessStartPosition</code> 确定 Authentic I-PDU 内新鲜度的起始位置（以比特为单位），<code>SecOCAuthDataFreshnessLen</code> 确定其长度（以比特为单位）。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这允许重用来自有效负载的现有新鲜度值，这些值保证在新鲜度时间戳的有效期内是唯一的，例如 一个 4 位 E2E 计数器。 在这种情况下，SecOC 不需要生成任何额外的计数器值。</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>如果<code>SecOCUseAuthDataFreshness</code>设置为TRUE，<code>SecOCAuthDataFreshnessStartPosition</code>设置为“11”，<code>SecOCAAuthDataFreshLen</code>设置为“4”，则将提取PDU的以下部分：<img alt="image-20230314104113279" src="../Function.assets/image-20230314104113279.png" /></p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00220: 新鲜度管理器以字节数组的形式在接口函数中提供或接收新鲜度信息。新鲜度始终与数组中第一个字节的MSB对齐。新鲜度的第15位是第2字节的MSB，依此类推。新鲜度数组中未使用的位必须设置为0。相关的长度信息必须以位为单位。</p>
+</blockquote>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>10位新鲜度“001101011”（bin）可以位于2字节数组中，并对应于值：“35 80”（十六进制）。长度值为10。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00221: 如果对于PDU配置，<code>SecOCQueryFreshnessValue=CFUNC</code> 和 <code>SecOCProvideTxTruncatedFreshnessValue=TRUE</code>，则每当为各个PDU构造<code>DataToAuthenticator</code>时，SecOC都会调用接口函数<code>SecOC_GetTxFreshnessTruncData</code>。</p>
+<p>SWS_SecOC_00222: 如果PDU配置的<code>SecOCQueryFreshnessValue=CFUNC</code>和<code>SecOCProvideTxTruncatedFreshnessValue=FALSE</code>，则每当为相应的PDU构造<code>DataToAuthenticator</code>时，SecOC都会调用接口函数<code>SecOC_GetTxFreshness</code>。</p>
+<p>SWS_SecOC_00223: 如果对于PDU配置，<code>SecOCQueryFreshnessValue=RTE</code> AND <code>SecOCProvideTxTruncatedFreshness Value=TRUE</code>，则每当为相应PDU构造<code>DataToAuthenticator</code>时，SecOC都会调用服务操作<code>FreshnessManagement_GetTxFreshnessTruncData</code>。</p>
+<p>SWS_SecOC_00224: 如果对于PDU配置，<code>SecOCQueryFreshnessValue=RTE</code> AND <code>SecOCProvideTxTruncatedFreshnessValue=FALSE</code>，则每当为相应的PDU构造<code>DataToAuthenticator</code>时，SecOC都会调用服务操作<code>FreshnessManagement_GetTxFreshness</code>。</p>
+<p>SWS_SecOC_00225: 对于排队到SecOC的每个传输请求，应维护认证构建计数器。</p>
+<p>SWS_SecOC_00226: 在初始处理安全 I-PDU 的传输请求时，SecOC 应将认证构建计数器设置为 0。</p>
+<p>SWS_SecOC_00227: 如果新鲜度函数的查询（例如 <code>SecOC_GetTxFreshness()</code>）返回 <code>E_BUSY</code> 或验证器的计算（例如 <code>Csm_MacGenerate()</code>）返回 <code>E_BUSY</code>、<code>QUEUE_FULL</code> 或任何其他可恢复的错误，则验证构建计数器应递增。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>返回值<code>E_NOT_OK</code>不被视为可恢复错误。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00228: 如果构建身份验证失败，且身份验证构建计数器尚未达到配置值<code>SecOCAuthenticationBuildAttempts</code>，则应在下次调用Tx主函数时重试新鲜度尝试和身份验证器计算。</p>
+<p>SWS_SecOC_00229: 如果认证建立计数器已经达到配置值<code>SecOCAuthenticationBuildAttempts</code>，或者新鲜度函数的查询返回<code>E_NOT_OK</code>，或者认证器的计算返回不可恢复的错误，例如返回<code>E_NOT_OK</code>或<code>KEY_FAILURE</code>，SecOC模块将使用<code>SecOCDefaultAuthenticationInformationPattern</code>来处理所有的 如果发送 <code>SecOCDefaultAuthenticationInformationPattern</code> 由服务 <code>SecOC_SendDefaultAuthenticationInformation</code> 启用，则新鲜度值和 Authenticator 字节用于构建身份验证信息。 如果未启用发送 <code>SecOCDefaultAuthenticationInformationPattern</code>，SecOC 模块应从其内部缓冲区中删除 Authentic I-PDU 并取消传输请求。</p>
+</blockquote>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>SecOCFreshnessValueTxLength=4位
+SecOCAuthInfoTxLength=20位
+SecOCDefaultAuthenticatorValue=0xA5
+安全PDU中生成的默认身份验证信息将是0x05（截短的新鲜度值）|0xA5 0xA5 0xA0（截短的身份验证器）。“|”表示串联。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00230: 如果PDU配置的<code>SecOCQueryFreshnessValue=CFUNC</code>和<code>SecOCProvideTxTruncatedFreshnessValue=TRUE</code>，SecOC将调用名为<code>SecOC_GetTxFreshnessTruncData</code>的函数，以获取TX消息的当前新鲜度。</p>
+<p>SWS_SecOC_00231: 如果PDU配置的SecOCQueryFreshnessValue=CFUNC和SecOCProvideTxTruncatedFreshness Value=FALSE，SecOC将调用名为SecOC_GetTxFreshness的函数，以获取TX消息的当前新鲜度。</p>
+<p>SWS_SecOC_00232: 如果对于PDU配置，<code>SecOCQueryFreshnessValue=CFUNC</code>，SecOC调用具有<code>SWS_SecOC_91005</code>中描述的签名的函数，以指示已成功启动安全I-PDU进行传输。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>消息出现在总线上后，不会调用此函数。在成功向PduR发送请求之后，调用该函数被认为是更安全的。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00233: 如果 <code>SecOCQueryFreshnessValue = RTE</code> 对于 PDU 配置，SecOC 调用服务操作 <code>FreshnessManagement_SPduTxConfirmation</code> 以指示安全 I-PDU 已成功启动传输。</p>
+<p>SWS_SecOC_00234: 对于SecOC内的每个已处理的安全I-PDU，应维护认证构建计数器和认证验证尝试计数器。</p>
+<p>SWS_SecOC_00235: 在初始处理接收到的安全I-PDU时，认证构建计数器和认证验证尝试计数器应设置为0。</p>
+<p>SWS_SecOC_00236: 如果新鲜度函数的查询（例如 <code>SecOC_GetRxFreshness()</code>）返回 E_BUSY，则认证构建计数器应递增，并且不应执行任何认证验证尝试。</p>
+<p>SWS_SecOC_00237: 如果验证器的验证（例如 <code>Csm_MacVerify()</code>）返回 <code>E_BUSY</code>、<code>QUEUE_FULL</code> 或任何其他可恢复的错误，则验证构建计数器应递增。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>返回值<code>E_NOT_OK</code>不被视为可恢复错误。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00238: 如果身份验证构建尝试失败，且身份验证构建计数器尚未达到配置值<code>SecOCAuthenticationBuildAttempts</code>，则应在下次调用Rx主函数时重试新鲜度尝试和身份验证。</p>
+<p>SWS_SecOC_00239: 如果认证器的验证可以成功执行但验证失败（例如 MAC 验证失败或密钥无效），则应增加认证验证尝试计数器并将认证构建计数器设置为 0。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>重置身份验证构建计数器应防止过早中断身份验证过程，即使仍然可以进行身份验证验证尝试。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00240: 如果认证构建计数器已达到配置值<code>SecOCAuthenticationBuildAttempts</code>，SecOC模块应从其内部缓冲区中删除Authentic I-PDU，并丢弃接收到的消息。<code>VerificationResultType</code>应设置为<code>SECOC_AUTHENTICATIONBUILDFAILURE</code>。</p>
+<p>如果使用<code>SecOC_VerifyStatusOverride</code>，则根据overrideStatus值处理验证结果和I-PDU。</p>
+<p>SWS_SecOC_00256: 如果新鲜度函数的查询返回E_NOT_OK，SecOC模块应从其内部缓冲区中删除Authentic I-PDU，并丢弃接收到的消息。<code>VerificationResultType</code>应设置为<code>SECOC_FRESHNESSFAILURE</code>。</p>
+<p>SWS_SecOC_00241: 如果认证验证尝试计数器已达到配置值<code>SecOCAuthenticationVerifyAttempts</code>，或者认证器的验证返回了不可恢复的错误，例如返回<code>E_NOT_OK</code>或<code>KEY_FAILURE</code>，SecOC模块应从其内部缓冲区中删除Authentic I-PDU，并应丢弃接收到的消息。<code>VerificationResultType</code>应设置为<code>SECOC_VERIFICATIONFAILURE</code>。</p>
+<p>如果使用<code>SecOC_VerifyStatusOverride</code>，则根据overrideStatus值处理验证结果和I-PDU。</p>
+<p>SWS_SecOC_00242: 如果认证器验证成功，则<code>VerificationResultType</code>应设置为<code>SECOC_VERIFICATIONSUCCESS</code>。</p>
+<p>SWS_SecOC_00243: 新鲜度管理应使用验证状态调出功能（SWS_SECCO_00119）获取安全I-PDU的验证结果。此通知可以用作同步其他新鲜度尝试的示例，也可以用于计数器增量。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SecOC 允许覆盖状态（参见 SWS_SECOC_00142）。 因此，如果新鲜度管理依赖状态标注，同时使用状态覆盖功能，则必须小心。 这会导致新鲜度管理中的冲突，并可能导致不正确的新鲜度值。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00244: 如果 PDU 配置的 <code>SecOCQueryFreshnessValue = RTE</code> AND <code>SecOCUseAuthDataFreshness = TRUE</code> 并且安全的 PDU 被完全接收，SecOC 调用 Rte 服务 <code>FreshnessManagement_GetRxFreshnessAuthData</code> 来查询当前新鲜度。 根据配置 <code>SecOCAuthDataFreshnessStartPosition</code> 和 <code>SecOCAuthDataFreshnessLen</code> 的配置，接收到的 PDU 数据的一部分被传递到此服务操作。</p>
+<p>SWS_SecOC_00245: 如果 PDU 配置的 <code>SecOCQueryFreshnessValue = RTE</code> AND <code>SecOCUseAuthDataFreshness = FALSE</code> 并且安全的 PDU 被完全接收，SecOC 调用 Rte 服务 <code>FreshnessManagement_GetRxFreshness</code> 来查询当前新鲜度。</p>
+<p>SWS_SecOC_00246: 如果对于PDU配置<code>SecOCQueryFreshnessValue = CFUNC</code> AND <code>SecOCUseAuthDataFreshness = TRUE</code>，并且安全PDU被完全接收，SecOC调用接口函数<code>SecOC_GetRxFreshnessAuthData</code>查询当前新鲜度。 根据配置 <code>SecOCAuthDataFreshnessStartPosition</code> 和 <code>SecOCAuthDataFreshnessLen</code> 的配置，接收到的 PDU 数据的一部分将传递给此函数。</p>
+<p>SWS_SecOC_00247: 如果对于PDU配置，<code>SecOCQueryFreshnessValue=CFUNC</code> AND <code>SecOCUseAuthDataFreshness=FALSE</code>，并且已完全接收到受保护的PDU，则SecOC调用接口函数<code>SecOC_GetRxFreshness</code>以查询当前的新鲜度。</p>
+<p>SWS_SecOC_00248: 如果 Rx 新鲜度请求函数返回 <code>E_NOT_OK</code>，则 Authentic I-PDU 的验证被认为失败，并且该 PDU 的验证重试计数器应增加。 如果认证尝试的次数已经达到 <code>SecOCAuthenticationVerifyAttempts</code>，SecOC 模块应该从它的内部缓冲区中移除 Authentic I-PDU。 故障 <code>SECOC_E_FRESHNESS_FAILURE</code> 应报告给 DET 模块。</p>
+<p>SWS_SecOC_00249: 如果对于PDU配置，<code>SecOCQueryFreshnessValue=CFUNC</code>和<code>SecOCUseAuthDataFreshness=TRUE</code>，SecOC将查询名为<code>SecOC_GetRxFreshnessAuthData</code>的函数，以获取RX消息的当前新鲜度。</p>
+<p>SWS_SecOC_00250: 如果PDU配置的<code>SecOCQueryFreshnessValue=CFUNC</code>和<code>SecOCUseAuthDataFreshness=FALSE</code>，SecOC将查询名为<code>SecOC_GetRxFreshness</code>的函数，以获取RX消息的当前新鲜度。</p>
+</blockquote>
+<h4 id="i-pdu">I-PDU的认证<a class="headerlink" href="#i-pdu" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>SWS_SecOC_00031: 安全I-PDU的创建以及真实I-PDU的认证包括以下六个步骤:</p>
+<ol>
+<li>准备安全I-PDU</li>
+<li>构造身份验证器的数据</li>
+<li>生成验证器</li>
+<li>构建安全I-PDU</li>
+<li>增量新鲜度计数器</li>
+<li>广播安全I-PDU</li>
+</ol>
+<p>SWS_SecOC_00033: SecOC 模块应准备安全 I-PDU。 在准备期间，SecOC 应分配必要的缓冲区来保存认证过程的中间结果和最终结果。</p>
+<p>SWS_SecOC_00034: SecOC 模块应构造 <code>DataToAuthenticator</code>，即用于计算 Authenticator 的数据。 <code>DataToAuthenticator</code> 由 Data Id 的完整 16 位表示（参数 SecOCDataId）、Authentic I-PDU 的安全部分和完整的 Freshness Value 对应于给定顺序的 SecOCFreshnessValueID 组成。 为此，Data Id 和 Freshness Value 应以 Big Endian 字节顺序进行编码。</p>
+<p>SWS_SecOC_00035: SecOC 模块应通过将 <code>DataToAuthenticator</code>、<code>DataToAuthenticator</code> 的长度传递到对应于 <code>SecOCTxAuthServiceConfigRef</code> 的认证算法中来生成认证器。</p>
+<p>SWS_SecOC_00036: SecOC模块应将生成的Authenticator截断为<code>SecOCAuthInfoTruncLength</code>指定的位数。</p>
+<p>SWS_SecOC_00037: SecOC 模块应通过将安全 I-PDU 报头（可选）、新鲜度值（可选）和认证符添加到真实 I-PDU 来构建安全 I-PDU。</p>
+<p>安全I-PDU的方案（包括安全I-PDU中内容的结构顺序）应符合以下要求：</p>
+<p>$$
+  SecuredPDU = SecuredIPDUHeader (optional) | AuthenticIPDU | FreshnessValue [SecOCFreshnessValueTruncLength] (optional) | Authenticator [SecOCAuthInfoTruncLength]
+  $$</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>作为安全I-PDU的一部分包括的新鲜度计数器和认证器可以按照特定于安全I-PDU标识符的配置被截断。此外，Freshness Value可能是Authentic I-PDU的一部分</p>
+</div>
+<h4 id="i-pdu_1">I-PDU的验证<a class="headerlink" href="#i-pdu_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>SWS_SecOC_00040: 安全I-PDU的验证包括以下六个步骤：</p>
+<ul>
+<li>解析真实的 I-PDU、新鲜度值和验证器</li>
+<li>从 Freshness Manager 获取新鲜度值</li>
+<li>构造数据以进行身份验证</li>
+<li>验证身份验证信息</li>
+<li>向新鲜度管理发送确认</li>
+<li>将 Authentic I-PDU 传递给上层</li>
+</ul>
+<p>SWS_SecOC_00203: 如果使用<code>SecOCRxSecuredPduCollection</code>，则SecOC在收到构成安全I-PDU的真实I-PDU和加密I-PDU之前，不得进行任何验证。只有在两者都收到后，SecOC才能尝试验证生成的安全I-PDU。如果使用<code>SecOC_VerifyStatusOverride</code>，则根据<code>overrideStatus</code>值处理验证结果和I-PDU。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这适用于当 SecOC 从 PduR 接收到安全 I-PDU 时的所有情况，这在使用 <code>SecOCRxSecuredPduCollection</code> 时发生在上述部分中。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00211: 如果使用了 <code>SecOCRxSecuredPduCollection</code>，那么 SecOC 将不会尝试验证安全 I-PDU，直到它收到并缓冲了具有匹配消息链接器值的真实 I-PDU 和加密 I-PDU。 如果使用<code>SecOC_VerifyStatusOverride</code>，则根据overrideStatus值处理验证结果和I-PDU。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果 SecOCUseMessageLink 的多重性为 0，则意味着 SecOCMessageLinkLen 为 0，消息链接器值始终匹配。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00042: 收到安全的I-PDU后，SecOC应解析真实的I-PDU、新鲜度值和来自它的身份验证器。</p>
+</blockquote>
+<p><img alt="image-20230314153951399" src="../Function.assets/image-20230314153951399.png" /></p>
+<blockquote>
+<p>SWS_SecOC_00046: SecOC模块应构建用于计算接收方身份验证器（<code>DataToAuthenticator</code>）的数据。此数据由<code>SecOCDataId</code> | <code>AuthenticIPDU</code> | <code>FreshnessVerifyValue</code>组成</p>
+<p>SWS_SecOC_00047: SecOC模块应通过将<code>DataToAuthenticator</code>、<code>DataToAuthenticater</code>的长度、从Secured I-PDU解析的Authenticator和<code>SecOCAuthInfoTruncLength</code>传递到对应于<code>SecOCRxAuthServiceConfigRef</code>的认证算法中来验证Authenticator。如果使用<code>SecOC_VerifyStatusOverride</code>，则根据overrideStatus值处理验证结果和I-PDU。
+</p>
+</blockquote>
+<p><img alt="image-20230314155044460" src="../Function.assets/image-20230314155044460.png" /></p>
+<blockquote>
+<p>SWS_SecOC_00048: SecOC模块应报告相应安全Rx PDU的验证状态，如下所示：</p>
+<p>如果<code>SecOCRxDuProcessing</code>/<code>SecOCVerificationStatusPropagationMode</code>设置为<code>BOTH</code>或<code>FAILURE_ONLY</code>，则应根据当前配置通过调用函数<code>SecOC_VerificationStatusCallout</code>和SecOC_VverificationStatus接口提供验证状态。如果配置设置为<code>NONE</code>，则不会提供报告。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果Freshness Manager需要安全PDU的状态（无论其是否成功验证），例如同步时间或计数器，则该状态应从SecOC提供的VerificationStatus服务中获取。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00271: SecOC 模块应按如下方式报告相应安全 Rx-PDU 的验证状态：</p>
+<p>如果 <code>SecOCRxPduProcessing</code>/<code>SecOCClientServerVerificationStatusPropagationMode</code> 设置为 <code>BOTH</code> 或 <code>FAILURE_ONLY</code>，则验证状态应根据其当前配置通过服务接口 <code>SecOC_VerificationStatusIndication</code> 提供。 如果配置设置为 <code>NONE</code>，则不会提供报告</p>
+<p>SWS_SecOC_00272: 如果配置项 <code>SecOCGeneral</code>/<code>SecOCPropagateOnlyFinalVerificationStatus</code> 设置为 <code>TRUE</code>，则只报告 <mark>最终状态</mark> 。 如果此项设置为 <code>FALSE</code>，则应根据 SWS_SecOC_00048 和 SWS_SecOC_00271 报告每个单独的验证状态（最后一次以及所有之前失败的验证状态）。</p>
+</blockquote>
+<h5 id="i-pdu_2">I-PDU的成功验证<a class="headerlink" href="#i-pdu_2" title="Permanent link">&para;</a></h5>
+<blockquote>
+<p>SWS_SecOC_00050: 如果安全I-PDU验证成功或相应地设置了状态覆盖，SecOC模块应使用PduR的下层接口将真实I-PDU传递给上层通信模块。</p>
+</blockquote>
+<h4 id="_5">不对称方法下的适应<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<p>尽管本文档因此使用了对称密码学中的术语和概念，但SecOC模块可以配置为同时使用对称和非对称加密算法。如果使用数字签名而非整个文档中描述的MAC方法的非对称方法，则必须进行一些调整：</p>
+<ol>
+<li>代替发送方和（所有）接收方之间的共享密钥，使用由公钥和密钥组成的密钥对。发送方使用秘密（或私有）密钥来生成签名，（所有）接收方使用相应的公钥来验证签名。私钥必须不可从公钥计算，并且接收方不能对其进行评估。</li>
+<li>为了验证消息，接收方需要访问签名生成算法的完整签名/输出。 因此，MAC 案例中提议的签名截断是不可能的。 参数 <code>SecOCAuthInfoTruncLength</code> 必须设置为签名的 <mark>完整长度</mark> 。</li>
+<li>签名验证使用与签名生成不同的算法。因此，接收方/验证者不是在接收方“重建”MAC并将其与接收到的（截断的）MAC进行比较，而是使用<code>DataToAuthenticator</code>（包括完整计数器）和签名作为输入执行验证算法，并获得布尔值作为输出，确定验证是否通过或失败。</li>
+</ol>
+<h3 id="pdur">与PduR的关系<a class="headerlink" href="#pdur" title="Permanent link">&para;</a></h3>
+<p>SecOC模块布置在AUTOSAR分层架构中的PDU路由器旁边；见图7。</p>
+<p><img alt="image-20230314160924886" src="../Function.assets/image-20230314160924886.png" /></p>
+<blockquote>
+<p>SWS_SecOC_00153: SecOC模块的实施应确保没有其他模块依赖于它，并且如果不需要SecOC模块，则可以在没有SecOC模块情况下构建系统。</p>
+<p>SWS_SecOC_00212: SecOC应确保在真实PDU中接收的元数据在相应的安全PDU中保持不变，反之亦然。</p>
+</blockquote>
+<h3 id="_6">初始化<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>SecOC 模块提供了一个初始化函数 (<code>SecOC_Init</code>)，如 SWS_SecOC_00106 中所定义。 此函数初始化所有内部全局变量和缓冲区以存储 SecOC I-PDU 和所有中间结果。 SecOC 的环境在调用 SecOC 模块的除 <code>SecOC_GetVersionInfo</code> 之外的任何其他函数之前应调用 <code>SecOC_Init</code>。实现者必须确保在开发模式下返回 <code>SecOC_E_UNINIT</code>，以防在模块初始化之前调用 API 函数。</p>
+<p>对于通过SecOC模块的I-PDU数据传输路径，在SecOC模块内部分配了一个 <mark>缓冲区</mark> 。 这个缓冲区需要 <mark>初始化</mark> ，因为它可能在它被下层通信模块的上层完全填充数据之前被传输。</p>
+<blockquote>
+<p>SWS_SecOC_00054: 在 <code>SecOC_Init</code> 中，模块应初始化所有内部全局变量和 SecOC I-PDU 的缓冲区。</p>
+<p>SWS_SecOC_00269: AUTOSAR SecOC 模块应使用配置参数 <code>SecOCTxPduUnusedAreasDefault</code>(ECUC_SecOC_00101) 确定的值填充传输的安全或传输的加密 Pdu 的未使用区域，例如 0xFF。</p>
+</blockquote>
+<h3 id="pdu">传出PDU的身份验证<a class="headerlink" href="#pdu" title="Permanent link">&para;</a></h3>
+<p>术语“身份验证”描述了通过将身份验证信息添加到真实I-PDU来创建安全I-PDU。通常，与PduR模块的交互和Authentic I-PDU的认证按照以下方案组织：</p>
+<ol>
+<li>对于Authentic I-PDU的每一次传输请求，上层通信模块应通过<code>PduR_&lt;Up&gt;Transmit</code>调用PduR模块。</li>
+<li>PduR 将该请求路由到 SecOC 模块并调用 <code>SecOC_[If|Tp]Transmit</code></li>
+<li>SecOC模块将Authentic I-PDU复制到自己的内存并返回。</li>
+<li>在其主功能的下一个调度呼叫期间，SecOC模块通过计算认证信息来创建安全I-PDU，并通过经由PduR模块通知相应的下层模块来启动安全I-PDU的传输。</li>
+<li>此后，SecOC模块扮演上层通信模块的角色，并因此服务于所有下层请求，以提供关于安全I-PDU的信息或复制其数据。</li>
+<li>最后，将安全I-PDU的成功或不成功传输的确认提供给上层通信模块，作为对真实I-PDU成功或不失败传输的确认</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>对于每个Authentic I-PDU，上层通信模块的配置方式应确保其调用PduR模块，与直接传输请求的调用方式相同。在这种情况下，上层通过SecOC模块与TriggerTransmit和TP行为解耦。</p>
+</div>
+<p>为了启动Authentic I-PDU的传输，上层模块始终（与用于具体传输的总线接口无关）通过<code>PduR_＜Up＞Transmit</code>调用PduR模块。PduR将该请求路由到SecOC模块，以便SecOC模块能够立即访问上层通信模块的缓冲器中的Authentic I-PDU。</p>
+<blockquote>
+<p>SWS_SecOC_00252: SecOC模块应在开始传输相应的安全I-PDU之前，将完整的Authentic I-PDU复制到其内部存储器中。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这意味着 Up 与 Lower PDU 接口的 IF/TP 配置之间没有依赖关系。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00201: 如果使用 SecOCTxSecuredPduCollection，则 SecOC 应将 Secured(安全) I-PDU 作为两条消息进行传输：原始 Authentic(真实) I-PDU 和单独的 Cryptographic(加密) I-PDU。 Cryptographic(加密) I-PDU 应包含 Secured(安全) I-PDU 的所有认证信息，因此 Authentic(真实) I-PDU 和 Cryptographic(加密) I-PDU 包含重构 Secured(安全) I-PDU 所需的所有信息。</p>
+<p>SWS_SecOC_00202: SecOC应在同一主功能周期内传输真实I-PDU及其相应的加密I-PDU。</p>
+<p>SWS_SecOC_00209: 如果使用 <code>SecOCTxSecuredPduCollection</code>，则 SecOC 应在加密 I-PDU 内重复一部分真实 I-PDU 作为消息链接器，并且加密 I-PDU 应构造为 <code>Cryptographic I-PDU =Authentication Data | Message Linker</code></p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>“|”表示串联。</p>
+</div>
+<blockquote>
+<p>SWS_SecOC_00210: 如果使用 <code>SecOCUseMessageLink</code>，则 SecOC 应使用 Authentic I-PDU 内长度为 <code>SecOCMessageLinkLen</code> 位的位位置 <code>SecOCMessageLinkPos</code> 处的值作为消息链接器。</p>
+<p>SWS_SecOC_00057: 根据 SWS_SecOC_00031 中描述的过程，SecOC 模块应提供足够的缓冲区容量来存储传入的 Authentic I-PDU、传出的 Secured I-PDU 和认证过程的所有中间数据。</p>
+<p>SWS_SecOC_00146: SecOC模块应为真实I-PDU和安全I-PDU提供单独的缓冲区。</p>
+<p>SWS_SecOC_00110: 来自上层通信模块的任何传输请求都应覆盖包含 Authentic I-PDU 的缓冲区，而不影响相应 Secured I-PDU 的缓冲区。</p>
+</blockquote>
+<p>因此，可以处理真实I-PDU的上层更新，而不影响具有下层通信模块的安全I-PDU的正在进行的传输活动。</p>
+<blockquote>
+<p>SWS_SecOC_00262: 对于 <code>SecOCAuthPduHeaderLength &gt; 0</code> 的 Tx Secured I-PDU，SecOC 模块应将 Secured I-PDU Header 添加到 Secured I-PDU 中，并在 Secured I-PDU 中添加 Authentic I-PDU 的长度，以处理动态 Authentic I -PDU。</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这个 Header 的主要目的是指示 Freshness Value 和 Authenticator 在具有动态长度 Authentic I-PDU 的 Secured I-PDU 中的位置。一些不能选择任意长度 L-PDU 的总线（例如 CAN FD 和 FlexRay）也需要这个 Header ，因为 Freshness Value 和 Authenticator 的位置并不总是在 Secured I-PDU 的末尾，因为下层模块（例如 CanIf 和 FrIf）可能会在 SecOC 处理后添加特定于总线的填充字节（然后 L-PDU 包含 带有填充的安全 I-PDU 将是：Secured I-PDU = Secured I-PDU Header | Authentic I-PDU | Freshness Value | Authenticator | Bus-specific padding）。</p>
+</div>
+<h4 id="_7">直接传输期间的身份验证<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>为了使用允许临时传输的总线接口（例如 CanIf）传输 Authentic I-PDU，PDU 路由器模块触发 SecOC 模块对 Authentic I-PDU 的传输操作。在这种情况下，SecOC 模块准备 通过分配内部缓冲区容量并通过将真实 I-PDU 复制到本地缓冲区位置，在真实 I-PDU 的基础上创建安全 I-PDU。 之后它从 <code>SecOC_[If|Tp]Transmit</code> 返回。</p>
+<blockquote>
+<p>SWS_SecOC_00058: SecOC模块应分配内部缓冲容量，以将Authentic I-PDU和认证信息存储在连续存储器位置。</p>
+</blockquote>
+<p>Secured I-PDU 的实际创建是在下一次后续调用计划的 main 函数期间处理的。 这包括根据 SWS_SecOC_00031 计算认证信息并将认证信息（即 Authenticator 和可能被截断的新鲜度值）连续添加到 Authentic I-PDU 后面的缓冲区位置。 此后，SecOC 模块通过在 PduR 调用 PduR_SecOCTransmit 触发安全 I-PDU 到目标下层模块的传输。</p>
+<blockquote>
+<p>SWS_SecOC_00060: 对于使用允许 ad-hoc 传输的总线接口（例如 CanIf）传输 Authentic I-PDU，SecOC 模块应根据 SWS_SecOC_00031 中指定的总体方法计算计划主函数中的 Authenticator。</p>
+<p>SWS_SecOC_00061: 为了使用允许临时通信的总线接口（例如 CanIf）传输真实 I-PDU，SecOC 模块应在计划的主函数中创建安全 I-PDU。</p>
+<p>SWS_SecOC_00062: SecOC 模块应提供完整的安全 I-PDU，以便通过触发 <code>PduR_SecOCTransmit</code> 进一步传输到目标下层模块。</p>
+<p>SWS_SecOC_00063: 如果PDU Router模块通过调用<code>SecOC_[If|Tp]TxConfirmation</code>通知SecOC模块目标下层模块已经确认Secured I-PDU的传输或在传输过程中报告了错误，SecOC模块应传递接收到的结果 通过调用 <code>PduR_SecOC[If|Tp]TxConfirmation</code> 将相应的 Authentic I-PDU 发送给上层模块。</p>
+<p>SWS_SecOC_00064: 对于使用允许临时通信（例如 CanIf）的总线接口传输真实 I-PDU，如果为安全 I-PDU 调用 <code>SecOC_TxConfirmation</code>，SecOC 模块应释放包含安全 I-PDU 的缓冲区。</p>
+</blockquote>
+<h4 id="_8">触发传输期间的身份验证<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2023 Jian.Jiang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

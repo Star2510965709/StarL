@@ -1,0 +1,944 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="星星">
+      
+      
+        <meta name="author" content="Jian.Jiang">
+      
+      
+        <link rel="canonical" href="https://www.xxstar.com/SecOC/SequenceCharts/">
+      
+      
+        <link rel="prev" href="../API/">
+      
+      
+        <link rel="next" href="../Config/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.14">
+    
+    
+      
+        <title>Sequence Charts - Star Shine</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.113286f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../resources/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="light-orange" data-md-color-accent="indigo">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sequence-charts" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="Star Shine" class="md-header__button md-logo" aria-label="Star Shine" data-md-component="logo">
+      
+  <img src="../../index.assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Star Shine
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Sequence Charts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Star Shine" class="md-nav__button md-logo" aria-label="Star Shine" data-md-component="logo">
+      
+  <img src="../../index.assets/logo.png" alt="logo">
+
+    </a>
+    Star Shine
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        主页
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Mode Manger
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Mode Manger
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+          EcuM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          EcuM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/EcuM/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/Function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/API/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../EcuM/Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          BswM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          BswM
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/BswM/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/Function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/API/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/SequenceCharts/" class="md-nav__link">
+        Sequence Charts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../BswM/Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          information safety
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          information safety
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+          SecOC
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          SecOC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SecOC/" class="md-nav__link">
+        概述
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Function/" class="md-nav__link">
+        Function
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../API/" class="md-nav__link">
+        API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Sequence Charts
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Sequence Charts
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-charts" class="md-nav__link">
+    Sequence Charts
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequence Charts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gpt-wakeup-sequences" class="md-nav__link">
+    GPT Wakeup Sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icu-wakeup-sequences" class="md-nav__link">
+    ICU Wakeup Sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-wakeup-sequences" class="md-nav__link">
+    CAN Wakeup Sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lin-wakeup-sequences" class="md-nav__link">
+    LIN Wakeup Sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flexray-wakeup-sequences" class="md-nav__link">
+    FlexRay Wakeup Sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethernet-wakeup-sequence" class="md-nav__link">
+    Ethernet Wakeup Sequence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Config/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          关于
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          关于
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/release-notes/" class="md-nav__link">
+        发行说明
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contributing/" class="md-nav__link">
+        贡献
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/license/" class="md-nav__link">
+        许可
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-charts" class="md-nav__link">
+    Sequence Charts
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequence Charts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gpt-wakeup-sequences" class="md-nav__link">
+    GPT Wakeup Sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icu-wakeup-sequences" class="md-nav__link">
+    ICU Wakeup Sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#can-wakeup-sequences" class="md-nav__link">
+    CAN Wakeup Sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lin-wakeup-sequences" class="md-nav__link">
+    LIN Wakeup Sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flexray-wakeup-sequences" class="md-nav__link">
+    FlexRay Wakeup Sequences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethernet-wakeup-sequence" class="md-nav__link">
+    Ethernet Wakeup Sequence
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Sequence Charts</h1>
+
+<h2 id="sequence-charts">Sequence Charts<a class="headerlink" href="#sequence-charts" title="Permanent link">&para;</a></h2>
+<h3 id="gpt-wakeup-sequences">GPT Wakeup Sequences<a class="headerlink" href="#gpt-wakeup-sequences" title="Permanent link">&para;</a></h3>
+<p>通用计时器 （GPT） 是可能的唤醒源之一。通常，GPT 在 ECU 进入睡眠状态之前启动，硬件计时器在到期时会导致中断。中断唤醒微控制器，并在 GPT 模块中执行中断处理程序。它通知 ECU 状态管理器模块发生了 GPT 唤醒。为了区分导致唤醒的不同 GPT 通道，集成商可以为每个 GPT 通道分配不同的唤醒源标识符。图 9.1 显示了相应的调用顺序。</p>
+<p><img alt="image-20230222133446346" src="SequenceCharts.assets/image-20230222133446346.png" /></p>
+<p><img alt="image-20230222133559387" src="SequenceCharts.assets/image-20230222133559387.png" /></p>
+<h3 id="icu-wakeup-sequences">ICU Wakeup Sequences<a class="headerlink" href="#icu-wakeup-sequences" title="Permanent link">&para;</a></h3>
+<p>输入捕获单元 （ICU） 是另一个唤醒源。与GPT相反，ICU驱动程序本身并不是唤醒源。它只是处理唤醒中断的模块。因此，只有唤醒源的驱动程序才能判断它是否负责该唤醒。这使得EcuM_CheckWakeupHook必须询问作为实际唤醒源的模块。为了知道要询问哪个模块，ICU 必须将唤醒源的标识符传递给EcuM_CheckWakeup。对于共享中断，集成代码可能必须检查EcuM_CheckWakeupHook内的多个唤醒源。为此，ICU 必须传递可能导致此中断EcuM_CheckWakeup的所有唤醒源的标识符。请注意，EcuM_WakeupSourceT ype（请参阅 8.2.3 EcuM_WakeupSourceT ype）包含每个唤醒源的一个位，因此可以在一次调用中传递多个唤醒源。</p>
+<p>图 9.3 显示了生成的调用序列。由于 ICU 只负责处理唤醒中断，因此轮询 ICU 是不明智的。为了轮询，必须直接检查唤醒源，如图 38 所示。</p>
+<p><img alt="image-20230222134033181" src="SequenceCharts.assets/image-20230222134033181.png" /></p>
+<h3 id="can-wakeup-sequences">CAN Wakeup Sequences<a class="headerlink" href="#can-wakeup-sequences" title="Permanent link">&para;</a></h3>
+<p>在CAN上，收发器或通信控制器可以使用中断或轮询来检测唤醒。唤醒源标识符应在收发器和控制器之间共享，因为ECU状态管理器模块只需要知道已唤醒的网络并将其传递给通信管理器模块。</p>
+<p>在中断或共享中断情况下，不清楚哪个特定的唤醒源（CAN控制器、CAN收发器、LIN控制器等）检测到唤醒。因此，集成器必须将派生的 EcuM_CheckWakeup 唤醒源（wakeupSource），它可以代表共享中断或仅代表中断通道，分配给传递给 CanIf_CheckWakeup（WakeupSource） 的特定唤醒源。因此，这里的参数 wakeupSource 来自 EcuM_CheckWakeup（） 可能与 CanIf_CheckWakeup 的 WakeupSource 不同，或者它们可以相等。这取决于硬件拓扑和EcuM_CheckWakeupHook集成器代码中的实现。</p>
+<p>在中断或共享中断情况下，不清楚哪个特定的唤醒源（CAN控制器、CAN收发器、LIN控制器等）检测到唤醒。因此，集成器必须将 EcuM_CheckWakeup(wakeupSource)的派生的唤醒源分配给传递给特定唤醒源，它可以代表共享中断或仅代表中断通道，并传递给 CanIf_CheckWakeup(WakeupSource)。因此，这里的参数 wakeupSource 来自 EcuM_CheckWakeup（） 可能与 CanIf_CheckWakeup 的 WakeupSource 不同，或者它们可以相等。这取决于硬件拓扑和EcuM_CheckWakeupHook集成器代码中的实现。</p>
+<p>在CanIf_CheckWakeup(WakeupSource)期间，CAN接口模块(CanIf)将检查是否有任何设备(CAN通信控制器或收发器)配置了“WakeupSource”的值。如果是这种情况，则通过相应的设备驱动程序模块检查设备是否唤醒。如果设备检测到唤醒，设备驱动程序将通过EcuM_SetWakeupEvent(sources)通知EcuM。参数“sources”在设备上设置为已配置的值。因此它被设置为调用CanIf_CheckWakeup()时使用的值。</p>
+<p><img alt="image-20230222135606103" src="SequenceCharts.assets/image-20230222135606103.png" /></p>
+<p>CAN控制器中断唤醒的工作方式类似于GPT唤醒。此处，中断处理程序和 CheckWakeup 功能都封装在 CAN 驱动程序模块中，如图 9.5 所示。</p>
+<p><img alt="image-20230222135917935" src="SequenceCharts.assets/image-20230222135917935.png" /></p>
+<p>CAN收发器和控制器都可以通过轮询唤醒。ECU状态管理器模块将定期检查CAN接口模块，该模块根据传递给CAN接口模块的唤醒源参数询问CAN驱动程序模块或CAN收发器驱动程序模块，如图9.6所示。</p>
+<p><img alt="image-20230222145440781" src="SequenceCharts.assets/image-20230222145440781.png" /></p>
+<p>通过中断或轮询检测到来自CAN收发器或控制器的唤醒事件后，可以验证唤醒事件。这是通过打开EcuM_StartWakeupSources中相应的CAN收发器和控制器来完成的（参见[SWS_EcuM_02924]）。这取决于所使用的CAN收发器和控制器，集成器代码EcuM_StartWakeupSource中的哪些函数调用是必要的。例如，在图 9.7 中，提到了启动和停止来自 CAN 状态管理器模块的唤醒源所需的函数调用。</p>
+<p>CanIf 识别成功接收至少一条消息，并将其记录为成功验证。在验证期间，ECU状态管理器模块定期检查集成器代码EcuM_CheckValidation中的CanIf </p>
+<p>ECU状态管理器模块在验证成功后，将通过通信管理器模块继续正常启动CAN网络。</p>
+<p><img alt="image-20230222153729030" src="SequenceCharts.assets/image-20230222153729030.png" /></p>
+<h3 id="lin-wakeup-sequences">LIN Wakeup Sequences<a class="headerlink" href="#lin-wakeup-sequences" title="Permanent link">&para;</a></h3>
+<p>图9.8显示了LIN收发器通过中断唤醒。中断通常由ICU驱动程序处理，如9.2.2章所述。</p>
+<p><img alt="image-20230222154253513" src="SequenceCharts.assets/image-20230222154253513.png" /></p>
+<p>如图9.9所示，LIN控制器中断唤醒原理与CAN控制器中断唤醒原理类似。在这两种情况下，Driver模块封装了中断处理程序。</p>
+<p><img alt="image-20230222154709800" src="SequenceCharts.assets/image-20230222154709800.png" /></p>
+<p>LIN收发器和控制器可以轮询唤醒。ECU状态管理器模块会定期检查LIN接口模块，而LIN接口模块会询问LIN驱动模块或LIN收发器驱动模块，如图9.10所示。</p>
+<p><img alt="image-20230222154959295" src="SequenceCharts.assets/image-20230222154959295.png" /></p>
+<h3 id="flexray-wakeup-sequences">FlexRay Wakeup Sequences<a class="headerlink" href="#flexray-wakeup-sequences" title="Permanent link">&para;</a></h3>
+<p>对于FlexRay，只有通过FlexRay收发器才能实现唤醒。FlexRay集群中有两个不同通道的收发器。它们被视为属于一个网络，因此，两个通道应该只配置一个唤醒源标识符。图9.11显示了FlexRay收发器通过中断唤醒。</p>
+<p><img alt="image-20230222155604356" src="SequenceCharts.assets/image-20230222155604356.png" /></p>
+<p>注意，在EcuMM_CheckWakeupHook中需要对FrIf_WakeupByTransceiver进行两个单独的调用，每个FlexRay通道一个。</p>
+<p><img alt="image-20230222155909126" src="SequenceCharts.assets/image-20230222155909126.png" /></p>
+<h3 id="ethernet-wakeup-sequence">Ethernet Wakeup Sequence<a class="headerlink" href="#ethernet-wakeup-sequence" title="Permanent link">&para;</a></h3>
+<p>在具有OA TC10兼容以太网硬件的以太网交换网络上，使用的以太网硬件(PHY)可以检测到唤醒。对于维护以太网交换机(主机ECU)的以太网ECU，建议使用按需轮询来检查以太网硬件通知的唤醒。因为检查所有受影响的EthSwtPort可能会花费时间，并且在中断中检查是不可接受的。因此，中断信号表明至少有一个以太网交换机端口检测到唤醒。在中断的上下文中，受影响的EthTrcv在EthTrcv_MainFunction中被发出异步检查的信号。</p>
+<p>每个EthTrcv应该有自己的唤醒源，以区分唤醒到达哪个EthSwtPort。如果EthSwtPort分配给相同的pnc，则可以共享唤醒源</p>
+<p>下面的以太网唤醒序列部分是可选的，因为没有“集成代码”的规范。因此，它是特定于实现的，例如在EcuM_CheckWakeupHook期间调用EthIf来检查唤醒源。</p>
+<p><img alt="image-20230222160547107" src="SequenceCharts.assets/image-20230222160547107.png" /></p>
+<p><img alt="image-20230222160651224" src="SequenceCharts.assets/image-20230222160651224.png" /></p>
+<p>单个以太网ECU(不维护以太网交换机的ECU)可以选择如何通过中断或轮询来检测唤醒。与主机ECU的不同之处在于，它不需要检查大量的以太网交换机端口。</p>
+<p><img alt="image-20230222160909157" src="SequenceCharts.assets/image-20230222160909157.png" /></p>
+<p><img alt="image-20230222161047220" src="SequenceCharts.assets/image-20230222161047220.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2023 Jian.Jiang
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.2a6f1dda.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
